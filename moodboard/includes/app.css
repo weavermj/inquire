@@ -1,0 +1,87 @@
+.main-content {
+	margin: 0 30px 30px 30px !important;
+}
+
+.underlined {
+	border-bottom: 1px solid #d4d4d4;
+}
+
+p {
+	font-size: 1.1em !important;
+}
+
+.main-logo {
+	margin: 20px 0;
+}
+
+.crimson {
+	font-family: 'Crimson Text', serif;
+}
+
+.cinzel {
+	font-family: 'Cinzel', serif;
+}
+
+.imfell {
+	font-family: 'IM Fell Double Pica', serif;
+}
+
+.jura {
+	font-family: 'Jura', sans-serif;
+	text-transform: uppercase;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.image-wrapper {
+	display: inline-block;
+	position: relative;
+}
+
+.image-wrapper:hover {
+	cursor: pointer;
+}
+
+.image-wrapper:hover .image-text {
+	background: rgba(214,31,38,1);
+	text-decoration:  underline;
+}
+
+.image-text {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 5px 7px 2px 7px;
+	text-transform:  uppercase;
+	background: rgba(214,31,38,0.75);
+	color: #ffffff;
+}
+
+.login-area {
+	margin-top: 20px;
+}
+
+.icons i {
+	margin-right: 2px;
+	font-size: 3em;
+	color: #2e3092;
+}
+
+.icons a {
+	color: #222222;
+	display: inline-block;
+}
+
+.icons a:hover span { 
+	text-decoration:  underline;
+}
+
+.icons a:hover i { 
+	color:  #d61f26;
+}
+
+.icons a i {
+	vertical-align:  middle;
+}
