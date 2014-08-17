@@ -20,6 +20,19 @@ p {
 	line-height:  1.33;
 }
 
+.bebas {
+	font-family: 'bebas_neueregular';
+	font-weight: normal !important;
+}
+
+h2.bebas {
+	font-size: 3em;
+}
+
+h3.bebas {
+	font-size: 2.2em;
+}
+
 .crimson {
 	font-family: 'Crimson Text', serif;
 }

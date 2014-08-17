@@ -16,12 +16,12 @@ $( document ).ready(function() {
 	});
 
 	$( "#traditional-headings" ).on( "click", function() {
-		$('h2.was-cinzel').addClass('cinzel').removeClass('arial').removeClass('opensans');
-		$('h3.was-cinzel').addClass('cinzel').removeClass('arial').removeClass('opensans');
+		$('h2.was-cinzel').addClass('cinzel').removeClass('arial').removeClass('opensans').removeClass('bebas').removeClass('was-cinzel');
+		$('h3.was-cinzel').addClass('cinzel').removeClass('arial').removeClass('opensans').removeClass('bebas').removeClass('was-cinzel');
 	});
 
 	$( "#traditional-images" ).on( "click", function() {
-		$('span.was-cinzel').removeClass('arial').removeClass('opensans').addClass('cinzel');
+		$('span.was-cinzel').removeClass('arial').removeClass('opensans').addClass('cinzel').removeClass('bebas');
 	});
 
 	$( "#traditional-links" ).on( "click", function() {
@@ -41,15 +41,15 @@ $( document ).ready(function() {
 	});
 
 	$( "#arial-headings" ).on( "click", function() {
-		$('h2.cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('opensans').addClass('arial');
-		$('h2.was-cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('opensans').addClass('arial');
-		$('h3.cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('opensans').addClass('arial');
-		$('h3.was-cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('opensans').addClass('arial');
+		$('h2.cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('opensans').removeClass('bebas').addClass('arial');
+		$('h2.was-cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('opensans').removeClass('bebas').addClass('arial');
+		$('h3.cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('opensans').removeClass('bebas').addClass('arial');
+		$('h3.was-cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('opensans').removeClass('bebas').addClass('arial');
 	});
 
 	$( "#arial-images" ).on( "click", function() {
-		$('span.cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('opensans').addClass('arial');
-		$('span.was-cinzel').removeClass('opensans').addClass('arial');
+		$('span.cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('opensans').addClass('arial').removeClass('bebas');
+		$('span.was-cinzel').removeClass('opensans').addClass('arial').removeClass('bebas');
 	});
 
 	$( "#arial-links" ).on( "click", function() {
@@ -70,20 +70,32 @@ $( document ).ready(function() {
 	});
 
 	$( "#opensans-headings" ).on( "click", function() {
-		$('h2.cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('arial').addClass('opensans');
-		$('h2.was-cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('arial').addClass('opensans');
-		$('h3.cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('arial').addClass('opensans');
-		$('h3.was-cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('arial').addClass('opensans');
+		$('h2.cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('arial').removeClass('bebas').addClass('opensans');
+		$('h2.was-cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('arial').removeClass('bebas').addClass('opensans');
+		$('h3.cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('arial').removeClass('bebas').addClass('opensans');
+		$('h3.was-cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('arial').removeClass('bebas').addClass('opensans');
 	});
 
 	$( "#opensans-images" ).on( "click", function() {
-		$('span.cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('arial').addClass('opensans');
-		$('span.was-cinzel').removeClass('arial').addClass('opensans');
+		$('span.cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('arial').addClass('opensans').removeClass('bebas');
+		$('span.was-cinzel').removeClass('arial').addClass('opensans').removeClass('bebas');
 	});
 
 	$( "#opensans-links" ).on( "click", function() {
 		$('.jura').addClass('was-jura').removeClass('jura').removeClass('arial').addClass('opensans');
 		$('.was-jura').removeClass('arial').addClass('opensans');
+	});
+
+	$( "#bebas-headings" ).on( "click", function() {
+		$('h2.cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('arial').removeClass('opensans').addClass('bebas');
+		$('h2.was-cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('arial').removeClass('opensans').addClass('bebas');
+		$('h3.cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('arial').removeClass('opensans').addClass('bebas');
+		$('h3.was-cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('arial').removeClass('opensans').addClass('bebas');
+	});
+
+	$( "#bebas-images" ).on( "click", function() {
+		$('span.cinzel').addClass('was-cinzel').removeClass('cinzel').removeClass('opensans').removeClass('arial').addClass('bebas');
+		$('span.was-cinzel').removeClass('opensans').removeClass('arial').addClass('bebas');
 	});
 
 });
