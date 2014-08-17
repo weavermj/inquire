@@ -14,6 +14,12 @@ p {
 	margin: 20px 0;
 }
 
+.arial {
+	color: #3d3d3d;
+	font-family: Arial !important;
+	line-height:  1.33;
+}
+
 .crimson {
 	font-family: 'Crimson Text', serif;
 }
@@ -29,6 +35,10 @@ p {
 .jura {
 	font-family: 'Jura', sans-serif;
 	text-transform: uppercase;
+}
+
+.opensans {
+	font-family: 'open_sansregular', serif;
 }
 
 .bold {
@@ -84,4 +94,32 @@ p {
 
 .icons a i {
 	vertical-align:  middle;
+}
+
+
+
+/* Typography styles */
+
+.main-content.arial .crimson {
+	color: #3d3d3d;
+	font-family: Arial !important;
+	line-height:  1.33;
+}
+
+.main-content.arial h2,
+.main-content.arial h3  {
+	color: #3d3d3d;
+	font-family: Arial !important;
+	line-height:  1.33;
+	/*text-transform:  uppercase;*/
+	letter-spacing: -2px;
+}
+
+.main-content.arial .image-wrapper span.cinzel {
+	font-family: Arial !important;
+}
+
+.main-content.arial .icons a.jura {
+	font-family: Arial !important;
+	font-size: 0.9em;
 }
