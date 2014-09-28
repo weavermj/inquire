@@ -40,7 +40,79 @@ $doc->addStyleSheet($tpath.'/css/main.css');
 
 <body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$active->alias.' '.$pageclass; ?>">
 
-<jdoc:include type="modules" name="position-7" style="none" />
+<div class="contain-to-grid sticky">
+  <nav class="top-bar" data-topbar data-options="sticky_on: large">
+    <ul class="title-area">
+        <li class="name">
+          <h1><a href="#">Inquire UK</a></h1>
+        </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+    <!-- 	<ul class="right">
+        <li class="active"><a href="#">Right Button Active</a></li>
+        <li class="has-dropdown">
+          <a href="#">Right Button Dropdown</a>
+          <ul class="dropdown">
+            <li><a href="#">First link in dropdown</a></li>
+          </ul>
+        </li>
+      </ul> -->
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li class="has-dropdown">
+              <a href="#">About</a>
+              <ul class="dropdown">
+                  <li><a href="#">What we do</a></li>
+                  <li><a href="#">Council</a></li>
+                  <li><a href="#">Sponsors</a></li>
+                  <li><a href="#">Contact Us</a></li>
+              </ul>
+          </li>
+          <li class="has-dropdown">
+              <a href="#">Membership</a>
+              <ul class="dropdown">
+                  <li><a href="#">How to join</a></li>
+                  <li><a href="#">Benefits</a></li>
+              </ul>
+          </li>
+          <li class="has-dropdown">
+              <a href="#">Seminars</a>
+              <ul class="dropdown">
+                  <li><a href="#">Upcoming Seminars</a></li>
+                  <li><a href="#">Attendance Policy</a></li>
+                  <li><a href="#">Call for Papers</a></li>
+                  <li><a href="#">Prize Winners</a></li>
+              </ul>
+          </li>
+          <li class="has-dropdown">
+              <a href="#">Research</a>
+              <ul class="dropdown">
+                  <li><a href="#">Completed Projects</a></li>
+                  <li><a href="#">Call for Proposals</a></li>
+              </ul>
+          </li>
+
+           <li class="has-dropdown">
+              <a href="#">Resources</a>
+              <ul class="dropdown">
+                  <li><a href="#">Seminar Archive</a></li>
+                  <li><a href="#">LinkedIn</a></li>
+                  <li><a href="#">Useful Links</a></li>
+              </ul>
+          </li>
+
+        <li class="hide-for-medium-up"><a href="#">Login</a></li>
+
+      </ul>
+    </section>
+  </nav>
+</div>
+
+
+<jdoc:include type="modules" name="menu" style="none" />
 
   <!--
     YOUR CODE HERE
