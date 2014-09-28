@@ -13,5 +13,6 @@ defined('_JEXEC') or die;
 require_once( dirname(__FILE__) . '/helper.php' );
 
 $logo = modInquireLogoLarge::getLogo($params);
+$isHomepage = modInquireLogoLarge::isHomepage();
 require( JModuleHelper::getLayoutPath('mod_inquire_logo_large'));
 ?>
