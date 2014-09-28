@@ -14,5 +14,7 @@ require_once( dirname(__FILE__) . '/helper.php' );
 
 $logo = modInquireLogoLarge::getLogo($params);
 $isHomepage = modInquireLogoLarge::isHomepage();
+$tempatePath = $this->baseurl.'/templates'.$this->template;
+
 require( JModuleHelper::getLayoutPath('mod_inquire_logo_large'));
 ?>
