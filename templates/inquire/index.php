@@ -19,9 +19,7 @@ $doc->addStyleSheet($tpath.'/lib/foundation/css/foundation.css');
 $doc->addStyleSheet($tpath.'/lib/foundation/css/foundation-icons.css');
 
 // Founcation Scripts
-
 $doc->addScript($tpath.'/lib/foundation/js/modernizr.js');
-$doc->addScript($tpath.'/lib/foundation/js/jquery.js');
 
 // template css
 $doc->addStyleSheet($tpath.'/css/normalize.css');
@@ -41,6 +39,8 @@ $doc->addStyleSheet($tpath.'/css/main.css');
 </head>
 
 <body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$active->alias.' '.$pageclass; ?>">
+
+<jdoc:include type="modules" name="position-7" style="none" />
 
   <!--
     YOUR CODE HERE
