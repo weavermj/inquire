@@ -2,7 +2,7 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 
 <extension version="2.5" type="template" client="site" method="upgrade">
-	
+
 	<name>Inquire</name>
 	<creationDate>2014-07-01</creationDate>
 	<author>Matt Weaver</author>
@@ -28,6 +28,12 @@
 	</files>
 
 	<positions><!-- define the positions for modules here -->
+		<position>menu</position>
+		<position>top-left</position>
+		<position>top-right</position>
+		<position>promos</position>
+		<position>main</position>
+		<position>footer</position>
 		<position>debug</position>
 	</positions>
 </extension>
