@@ -12,6 +12,17 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 // generator tag
 $this->setGenerator(null);
 
+// Foundation CSS
+
+$doc->addStyleSheet($tpath.'/lib/foundation/css/normalize.css');
+$doc->addStyleSheet($tpath.'/lib/foundation/css/foundation.css');
+$doc->addStyleSheet($tpath.'/lib/foundation/css/foundation-icons.css');
+
+// Founcation Scripts
+
+$doc->addScript($tpath.'/lib/foundation/js/modernizr.js');
+$doc->addScript($tpath.'/lib/foundation/js/jquery.js');
+
 // template css
 $doc->addStyleSheet($tpath.'/css/normalize.css');
 $doc->addStyleSheet($tpath.'/css/main.css');
