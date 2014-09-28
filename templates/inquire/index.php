@@ -16,10 +16,10 @@ $this->setGenerator(null);
 
 $doc->addStyleSheet($tpath.'/lib/foundation/css/normalize.css');
 $doc->addStyleSheet($tpath.'/lib/foundation/css/foundation.css');
-$doc->addStyleSheet($tpath.'/lib/foundation/css/foundation-icons.css');
+$doc->addStyleSheet($tpath.'/lib/foundation/foundation-icons/foundation-icons.css');
 
 // Founcation Scripts
-$doc->addScript($tpath.'/lib/foundation/js/modernizr.js');
+$doc->addScript($tpath.'/lib/foundation/js/venor/modernizr.js');
 
 // template css
 $doc->addStyleSheet($tpath.'/css/normalize.css');
