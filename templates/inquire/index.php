@@ -118,6 +118,10 @@ $doc->addStyleSheet($tpath.'/css/main.css');
     YOUR CODE HERE
   -->
   <jdoc:include type="modules" name="debug" />
+
+  <?php
+  $doc->addScript($tpath.'/lib/foundation/js/foundation.min.js');
+  ?>
 </body>
 
 </html>
