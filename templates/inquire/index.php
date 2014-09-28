@@ -1,8 +1,8 @@
-<?php defined( '_JEXEC' ) or die; 
+<?php defined( '_JEXEC' ) or die;
 
 // variables
 $app = JFactory::getApplication();
-$doc = JFactory::getDocument(); 
+$doc = JFactory::getDocument();
 $menu = $app->getMenu();
 $active = $app->getMenu()->getActive();
 $params = $app->getParams();
@@ -13,7 +13,8 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 $this->setGenerator(null);
 
 // template css
-$doc->addStyleSheet($tpath.'/css/template.css.php');
+$doc->addStyleSheet($tpath.'/css/normalize.css');
+$doc->addStyleSheet($tpath.'/css/main.css');
 
 ?><!doctype html>
 
@@ -27,10 +28,10 @@ $doc->addStyleSheet($tpath.'/css/template.css.php');
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $tpath; ?>/images/apple-touch-icon-114x114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $tpath; ?>/images/apple-touch-icon-144x144-precomposed.png">
 </head>
-  
+
 <body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$active->alias.' '.$pageclass; ?>">
-  
-  <!-- 
+
+  <!--
     YOUR CODE HERE
   -->
   <jdoc:include type="modules" name="debug" />
