@@ -2,20 +2,17 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 
 <extension version="2.5" type="template" client="site" method="upgrade">
-	
-	<name>frontend</name><!-- name the template -->
-	<creationDate>xxxx-xx-xx</creationDate><!-- the date your are beginn to code -->
-	<author>your name</author><!-- your name (oops, I repeat myself) -->
-	<copyright>Copyright © xxxx example.com</copyright><!-- for who you are coding -->
-	<authorEmail>your.name@example.com</authorEmail><!-- your email address -->
-	<authorUrl>http://www.example.com</authorUrl><!-- your url -->
-	<version>1.0.0</version><!-- give your template a number -->
-	<description><![CDATA[ 
-		<h1>frontend</h1>
-		<p>Created by <a href="http://www.example.com" target="_blank">your name | example.com</a>.</p>
-	]]></description><!-- change the description as you like -->
-	
-	<files><!-- no need to change -->
+
+	<name>Inquire</name>
+	<creationDate>2014-07-01</creationDate>
+	<author>Matt Weaver</author>
+	<copyright>Copyright © Inquire www.inquire.org.uk</copyright>
+	<authorEmail>admin@inqiure.org.uk</authorEmail>
+	<authorUrl>http://www.inquire.org.uk</authorUrl>
+	<version>1.0.0</version>
+	<description>Inquire UK Frontend Template</description>
+
+	<files>
 		<folder>css</folder>
 		<folder>html</folder>
 		<folder>images</folder>
@@ -29,9 +26,9 @@
 		<filename>favicon.ico</filename>
 		<filename>templateDetails.xml</filename>
 	</files>
-	
+
 	<positions><!-- define the positions for modules here -->
 		<position>debug</position>
 	</positions>
-	
+
 </extension>
