@@ -12,8 +12,9 @@ defined('_JEXEC') or die;
 // Include the syndicate functions only once
 require_once( dirname(__FILE__) . '/helper.php' );
 
-$logo = modInquireLogoLarge::getLogo($params);
 $isHomepage = modInquireLogoLarge::isHomepage();
+
+$modulePath = JURI::base().'modules/'.$module->module;
 
 require( JModuleHelper::getLayoutPath('mod_inquire_logo_large')); 
 

@@ -3,9 +3,7 @@
 defined('_JEXEC') or die; ?>
 <?php
 if($isHomepage) { ?>
-    <img class="main-logo" src="./images/logo.png">
-    <?php
-    echo $logo;
+    <img class="main-logo" src="<?= $modulePath ?>/images/logo.png"> <?php
 } else {
     echo 'not homepage';
 }
