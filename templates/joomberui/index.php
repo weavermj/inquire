@@ -58,7 +58,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
 	          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 	        </ul>
 	      <section class="top-bar-section">
-	        <ul class="right">
+	        <ul class="left">
 	          <jdoc:include type="modules" name="nav" style="joomberui" />
 	        </ul>
 	      </section>
