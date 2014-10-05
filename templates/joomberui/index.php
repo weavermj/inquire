@@ -85,7 +85,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
 				<jdoc:include type="modules" name="top-left" style="joomberui" />
 			<?php endif; ?>
 		</div>
-		<div class="small-12 medium-3 large-5 columns login-area show-for-medium-up">
+		<div class="small-12 medium-3 large-4 columns login-area show-for-medium-up">
 			<?php if ($this->countModules( 'top-right' )) : ?>
 				<jdoc:include type="modules" name="top-right" style="joomberui" />
 			<?php endif; ?>
