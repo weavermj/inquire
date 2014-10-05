@@ -8,7 +8,7 @@
 	<authorUrl>http://www.joomber.com</authorUrl>
 	<copyright>Copyright (C) 2014 David Childs | Joomber.com | All rights Reserved</copyright>
 	<license>GNU General Public License version 2 or later</license>
-	<version>1.1.0</version>	
+	<version>1.1.0</version>
 	<description>TPL_JOOMBERUI_DESCRIPTION</description>
 
 	<files>
@@ -28,6 +28,8 @@
 		<position>breadcrumbs</position>
 		<position>nav</position>
 		<position>top</position>
+		<position>top-left</position>
+		<position>top-right</position>
 		<position>above</position>
 		<position>above-content</position>
 		<position>left</position>
@@ -63,7 +65,7 @@
 				<field name="TopMenuWidth" type="radio" class="btn-group" default="0" label="Top Menu Width" description="Make the top menu wide or contain-to-grid?">
 				<option value="1">TPL_SETTINGS_CONTAIN_TO_GRID_TOPMENU</option>
 				<option value="0">TPL_SETTINGS_ROW_TOPMENU</option>
-				</field>	
+				</field>
 				<field type="spacer" default=" " />
 					<field name="setGeneratorTag" type="text" default="" label="TPL_SETTINGS_GENERATOR_LABEL" description="TPL_SETTINGS_GENERATOR_DESC" size="85" />
 					<field name="analytics" type="text" default="UA-XXXXX-X" label="TPL_SETTINGS_ANALYTICS_LABEL" description="TPL_SETTINGS_ANALYTICS_DESC" size="15" />
@@ -97,7 +99,7 @@
 						<option value="11">11</option>
 						<option value="12">12</option>
 					</field>
-			</fieldset>			
+			</fieldset>
 			<fieldset name="SOCIAL" label="TPL_SETTINGS_SOCIAL_LABEL">
 				<field name="twitter" type="text" default="" label="TPL_SETTINGS_TWITTER_LABEL" description="TPL_SETTINGS_TWITTER_DESC" />
 				<field name="twitterLink" type="text" default="" label="TPL_SETTINGS_TWITTER_LINK_LABEL" description="TPL_SETTINGS_TWITTER_LINK_DESC" filter="raw" />

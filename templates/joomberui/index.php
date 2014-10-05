@@ -12,12 +12,12 @@ Credits: Code taken from the following:
   Antony Doyle    - https://github.com/antonydoyle/siegeengine2
 /* ===================================================================== */
 
-// Load template framework 
-include_once JPATH_THEMES . '/' . $this->template . '/framework.php'; 
+// Load template framework
+include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]>
-	<html class="no-js lt-ie9" lang="en" > 
+	<html class="no-js lt-ie9" lang="en" >
 <![endif]-->
 <!--[if gt IE 8]>
 <!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -30,7 +30,8 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/foundation.css" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/foundation-icons.css" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/joomla.css" />
-    
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/layout.css" />
+
     <?php if ($customCSS != -1) : ?>
       <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/<?php echo $customCSS ?>" />
     <?php endif; ?>
@@ -66,7 +67,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
 	  </div>
     <?php if ($topmenu > 0) : echo "</div>"; endif; ?>
 	<?php endif; ?>
-	
+
 	<?php if ($this->countModules( 'top' )) : ?>
     <div class="top-row">
       <div class="wrapper">
@@ -75,12 +76,25 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
           <jdoc:include type="modules" name="top" style="joomberui" />
         </section>
       </div>
-    </div>  
+    </div>
 	<?php endif; ?>
-	
+
+	<div class="row">
+		<div class="small-12 medium-8 large-6 columns">
+			<?php if ($this->countModules( 'top-left' )) : ?>
+				<jdoc:include type="modules" name="top-left" style="joomberui" />
+			<?php endif; ?>
+		</div>
+		<div class="small-12 medium-3 large-5 columns login-area show-for-medium-up">
+			<?php if ($this->countModules( 'top-right' )) : ?>
+				<jdoc:include type="modules" name="top-right" style="joomberui" />
+			<?php endif; ?>
+		</div>
+	</div>
+
 	<?php if ($this->countModules( 'above' )) : ?>
     <div class="above-row">
-      <div class="wrapper">  
+      <div class="wrapper">
         <section class="row">
           <!--aboverow-->
           <jdoc:include type="modules" name="above" style="joomberui" />
@@ -88,7 +102,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
       </div>
     </div>
   <?php endif; ?>
-	
+
   <div class="row">
   	<!--mainrow-->
     <?php if ($this->countModules( 'left' )) : ?>
@@ -104,7 +118,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
         <!--above-content-->
           <jdoc:include type="modules" name="above-content" style="joomberui" />
       </div>
-    <?php endif; ?>            
+    <?php endif; ?>
 
 		<?php if ($this->countModules( 'breadcrumbs' )) : ?>
       <div class="breadcrumbs-row">
@@ -114,9 +128,9 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
     			</div>
         </div>
       </div>
-		<?php endif; ?> 
+		<?php endif; ?>
 
-     	<jdoc:include type="message" />  
+     	<jdoc:include type="message" />
     	<jdoc:include type="component" />
     <?php if ($this->countModules( 'below-content' )) : ?>
       <section class="below-content">
@@ -132,7 +146,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
       </section>
     <?php endif; ?>
       </div>
-	
+
     <?php if ($this->countModules( 'below' )) : ?>
       <div class="below-row">
         <div class="wrapper">
@@ -154,7 +168,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
         </div>
       </div>
     <?php endif; ?>
-	
+
     <?php if ($this->countModules( 'footer' )) : ?>
       <div class="footer-row">
         <div class="wrapper">
@@ -166,7 +180,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
       </div>
     <?php endif; ?>
 
-<!-- Credit Row Taken from https://github.com/nternetinspired/OneWeb -->         
+<!-- Credit Row Taken from https://github.com/nternetinspired/OneWeb -->
   <footer class="row">
     <?php if ($social > 0) : ?>
       <ul class="social">
@@ -194,7 +208,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
       </ul>
   </footer>
   <!-- end of credit row -->
-  
+
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/vendor/jquery-2.1.0.min.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation/foundation.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation/foundation.topbar.js"></script>
@@ -204,10 +218,10 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
     <script>
     	$(document).foundation();
   	</script>
-  
+
 
     <!-- Load respond.js for shit browsers -->
-  
+
   <!--[if lte IE 8]>  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/respond.js"></script> <![endif]-->
 
   <?php if ($analytics != "UA-XXXXX-X") : ?>
