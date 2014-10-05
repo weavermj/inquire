@@ -27,7 +27,6 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 	<?php endif; ?>
 
 <?php else : ?>
-
 <form action="<?php echo htmlspecialchars(JUri::getInstance()->toString()); ?>" method="post" name="adminForm" id="adminForm" class="form-inline">
 	<?php if ($this->params->get('show_headings') || $this->params->get('filter_field') != 'hide' || $this->params->get('show_pagination_limit')) :?>
 	<div class="filters btn-toolbar">
@@ -53,7 +52,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 	</div>
 	<?php endif; ?>
 
-	<ul class="category list-striped list-condensed">
+	<ul class="category list-striped list-condensed small-block-grid-2 medium-block-grid-2 large-block-grid-4">
 
 		<?php foreach ($this->items as $i => $article) : ?>
 			<?php if ($this->items[$i]->state == 0) : ?>
@@ -72,9 +71,22 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 							<?php echo JHtml::_('icon.edit', $article, $params); ?>
 						</span>
 					<?php endif; ?>
-					<strong class="list-title">
-						<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid)); ?>">
-							<?php echo $this->escape($article->title); ?></a>
+					<strong class="list-title"><?php
+						$images  = json_decode($article->images);
+						if ($images->image_intro_caption) :
+							$caption = $images->image_intro_caption;
+						else:
+							$caption = 'Awaiting Image';
+						endif; ?>
+						<a class="image-wrapper" href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid)); ?>">
+							<?php if (!$images->image_intro) : ?>
+								<img title="<?php echo htmlspecialchars($images->image_intro_caption); ?>" src="http://placehold.it/350x200&text=<?php echo $caption; ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>">
+
+							<?php else: ?>
+								<img title="<?php echo htmlspecialchars($images->image_intro_caption); ?>" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>">
+							<?php endif; ?>
+							<span class="image-text"><?php echo $this->escape($article->title); ?></span>
+						</a>
 					</strong>
 					<?php if ($this->items[$i]->state == 0): ?>
 						<span class="label label-warning">Unpublished</span>
