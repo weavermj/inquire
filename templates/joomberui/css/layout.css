@@ -51,6 +51,8 @@ h1 {
 }
 
 
+/* Category lists */
+
 .image-wrapper {
     display: inline-block;
     position: relative;
@@ -75,15 +77,46 @@ h1 {
     color: #ffffff;
 }
 
+/* *************** */
 
-/* Category lists */
+/* Council images */
 
-/*ul.category {
-    list-style-type: none;
-    margin-left: 0;
+.person {
+    margin-bottom: 16px;
+    text-align: center;
 }
 
-ul.category li {
-    width: 100px;
-    height: 100px;
-}*/
+.person div {
+    display: inline-block;
+    margin: 8px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.person img {
+    border-radius: 50%;
+    border: 8px solid #d61f26;
+}
+
+.person ul {
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+}
+
+.person li.name {
+    font-weight: bold;
+}
+
+.person li.position {
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.person li.company {
+    font-size: 0.8em;
+}
+
+.person li.email {
+    font-size: 0.8em;
+}
