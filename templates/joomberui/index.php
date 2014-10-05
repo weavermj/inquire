@@ -204,7 +204,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
     <?php endif; ?>
       <ul class="right">
         <div class="copyright">
-          <small>&copy; <?php echo date("Y"); ?> <?php echo htmlspecialchars($app->getCfg('sitename'));?></small>
+          <!--<small>&copy; <?php #echo date("Y"); ?> <?php #echo htmlspecialchars($app->getCfg('sitename'));?></small>-->
         </div>
       </ul>
   </footer>
