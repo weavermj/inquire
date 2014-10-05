@@ -28,3 +28,11 @@ h1, h2, h3, h4, h5 {
     border-bottom: 1px solid #d4d4d4;
     font-family: 'bebas', arial, sans-serif;
 }
+
+h1 {
+    font-size: 3em;
+}
+
+.active_menu {
+    border-bottom: 4px solid #d61f26;
+}
