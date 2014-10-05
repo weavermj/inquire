@@ -36,3 +36,54 @@ h1 {
 .active_menu {
     border-bottom: 4px solid #d61f26;
 }
+
+
+/* Images */
+
+.img-left {
+    float: left;
+    margin: 8px 8px 8px 0;
+}
+
+.img-right {
+    float: right;
+    margin: 8px 0 8px 8px;
+}
+
+
+.image-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.image-wrapper:hover {
+    cursor: pointer;
+}
+
+.image-wrapper:hover .image-text {
+    background: rgba(214,31,38,1);
+    text-decoration:  underline;
+}
+
+.image-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 5px 7px 2px 7px;
+    text-transform:  uppercase;
+    background: rgba(214,31,38,0.75);
+    color: #ffffff;
+}
+
+
+/* Category lists */
+
+/*ul.category {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+ul.category li {
+    width: 100px;
+    height: 100px;
+}*/
