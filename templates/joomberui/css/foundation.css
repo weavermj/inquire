@@ -2859,11 +2859,11 @@ button, .button {
   text-decoration: none;
   text-align: center;
   display: inline-block;
-  padding-top: 1rem;
-  padding-right: 2rem;
-  padding-bottom: 1.0625rem;
-  padding-left: 2rem;
-  font-size: 1rem;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  font-size: 0.8rem;
   /*     @else                            { font-size: $padding - rem-calc(2); } */
   background-color: #d61f26;
   border-color: #ab191e;
@@ -2871,11 +2871,11 @@ button, .button {
   -webkit-transition: background-color 300ms ease-out;
   -moz-transition: background-color 300ms ease-out;
   transition: background-color 300ms ease-out;
-  padding-top: 1rem;
-  padding-right: 2rem;
-  padding-bottom: 1.0625rem;
-  padding-left: 2rem;
-  font-size: 1rem;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  font-size: 0.8rem;
   /*     @else                            { font-size: $padding - rem-calc(2); } */
 }
 button:hover, button:focus, .button:hover, .button:focus {
