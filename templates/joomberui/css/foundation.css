@@ -1379,7 +1379,7 @@ select {
   padding: 0.875rem 1.5rem 0.875rem 0.875rem;
   font-size: 0.8125rem;
   background-color: #d61f26;
-  border-color: #0078a0;
+  border-color: #B81B26;
   color: white;
 }
 .alert-box .close {
@@ -5484,7 +5484,7 @@ dialog[open] {
 .sub-nav dt.active a:hover,
 .sub-nav dd.active a:hover,
 .sub-nav li.active a:hover {
-  background: #0078a0;
+  background: #B81B26;
 }
 
 div.switch {
@@ -6153,7 +6153,7 @@ meta.foundation-mq-topbar {
   color: white;
 }
 .top-bar-section ul li.active > a:hover {
-  background: #0078a0;
+  background: #B81B26;
   color: white;
 }
 .top-bar-section .has-form {
@@ -6316,7 +6316,7 @@ meta.foundation-mq-topbar {
     background: #d61f26;
   }
   .top-bar-section li.active:not(.has-form) a:not(.button):hover {
-    background: #0078a0;
+    background: #B81B26;
   }
   .top-bar-section .has-dropdown > a {
     padding-right: 35px !important;
@@ -6830,7 +6830,7 @@ a {
   line-height: inherit;
 }
 a:hover, a:focus {
-  color: #0078a0;
+  color: #B81B26;
 }
 a img {
   border: none;
