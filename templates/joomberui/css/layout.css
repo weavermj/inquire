@@ -75,6 +75,8 @@ h1 {
     text-transform:  uppercase;
     background: rgba(214,31,38,0.75);
     color: #ffffff;
+    font-family: 'opensans',arial, sans-serif;
+    font-weight: normal;
 }
 
 /* *************** */
