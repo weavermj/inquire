@@ -10,6 +10,7 @@
 defined('_JEXEC') or die;
 
 ?>
+<h4>Member Login</h4>
 <form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form" class="form-inline">
 	<?php if ($params->get('pretext')) : ?>
 		<div class="pretext">
