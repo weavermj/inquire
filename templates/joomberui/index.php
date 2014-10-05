@@ -217,6 +217,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation/foundation.orbit.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation/foundation.tab.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation/foundation.accordion.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation/foundation.dropdown.js"></script>
     <script>
     	$(document).foundation();
   	</script>

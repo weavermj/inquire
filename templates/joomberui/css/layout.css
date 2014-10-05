@@ -53,6 +53,13 @@ h1 {
     margin: 8px 0 8px 8px;
 }
 
+/* Forms */
+
+legend {
+    font-family: bebas, arial, sans-serif;
+    font-size: 2.2em;
+}
+
 
 /* Category lists */
 
@@ -125,3 +132,5 @@ h1 {
 .person li.email {
     font-size: 0.8em;
 }
+
+/* ****************** */
