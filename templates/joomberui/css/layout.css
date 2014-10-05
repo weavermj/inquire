@@ -33,6 +33,16 @@ h1 {
     font-size: 3em;
 }
 
+.top-bar a:hover,
+a.button,
+a.button {
+    border: none !important;
+}
+
+a:hover {
+    border-bottom: 1px solid #d61f26;
+}
+
 .active_menu {
     border-bottom: 4px solid #d61f26;
 }
@@ -60,6 +70,30 @@ legend {
     font-size: 2.2em;
 }
 
+/* Icons */
+
+.icons i {
+    margin-right: 2px;
+    font-size: 3em;
+    color: #2e3092;
+}
+
+.icons a {
+    color: #222222;
+    display: inline-block;
+}
+
+.icons a:hover span {
+    text-decoration:  underline;
+}
+
+.icons a:hover i {
+    color:  #d61f26;
+}
+
+.icons a i {
+    vertical-align:  middle;
+}
 
 /* Category lists */
 
