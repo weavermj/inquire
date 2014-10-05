@@ -79,7 +79,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
     </div>
 	<?php endif; ?>
 
-	<div class="row">
+	<div class="row" id="top-slot">
 		<div class="small-12 medium-8 large-6 columns">
 			<?php if ($this->countModules( 'top-left' )) : ?>
 				<jdoc:include type="modules" name="top-left" style="joomberui" />
