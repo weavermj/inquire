@@ -55,7 +55,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
 	    <nav class="top-bar <?php if ($TopMenuWidth == 0) { echo "row"; } ?>" data-topbar>
 	        <ul class="title-area">
 	          <li class="name">
-	            <h1><a href="<?php echo $this->baseurl ?>/" title="<?php echo htmlspecialchars($topbarTitle);?>"><?php echo htmlspecialchars($topbarTitle);?></a></h1>
+	            <span><a href="<?php echo $this->baseurl ?>/" title="<?php echo htmlspecialchars($topbarTitle);?>"><?php echo htmlspecialchars($topbarTitle);?></a></span>
 	          </li>
 	          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 	        </ul>

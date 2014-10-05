@@ -1,3 +1,26 @@
+/* Overwrites for the top-bar */
+
+.top-bar .name {
+  height: 45px;
+  margin: 0;
+  font-size: 16px;
+}
+.top-bar .name span {
+  line-height: 45px;
+  font-size: 1.0625rem;
+  margin: 0;
+}
+.top-bar .name span a {
+  font-weight: normal;
+  color: white;
+  width: 50%;
+  display: inline;
+  padding: 0 15px;
+}
+
+/* ************************** */
+
+
 #top-slot {
     margin: 16px auto;
 }

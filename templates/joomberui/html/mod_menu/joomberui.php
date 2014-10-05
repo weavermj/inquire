@@ -15,7 +15,7 @@ defined('_JEXEC') or die;
  <ul class="title-area">
     <!-- Title Area -->
 			    <li class="name">
-    
+
       <h1><a href="#"></a></h1>
     </li>
 
@@ -38,7 +38,7 @@ defined('_JEXEC') or die;
         if ($item->id == $active_id) {
             $class .= ' current';
         }
-    
+
         if (in_array($item->id, $path)) {
             $class .= ' active';
         }
@@ -57,17 +57,17 @@ defined('_JEXEC') or die;
         if ($item->deeper) {
             $class .= ' deeper';
         }
-    
+
         if ($item->parent) {
             $class .= ' parent';
         }
-    
+
         if (!empty($class)) {
             $class = ' class="'.trim($class) .'"';
         }
-    
+
         echo '<li'.$class.'>';
-    
+
         // Render the menu item.
         switch ($item->type) :
             case 'separator':
@@ -75,12 +75,12 @@ defined('_JEXEC') or die;
             case 'component':
                 require JModuleHelper::getLayoutPath('mod_menu', 'default_'.$item->type);
                 break;
-    
+
             default:
                 require JModuleHelper::getLayoutPath('mod_menu', 'default_url');
                 break;
         endswitch;
-      
+
         // The next item is deeper.
         if ($item->deeper) {
             echo '<ul class="dropdown">';
