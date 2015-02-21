@@ -46,10 +46,6 @@ JHtml::_('behavior.caption');
 
 	<?php if (!empty($this->children[$this->category->id])&& $this->maxLevel != 0) : ?>
 	<div class="cat-children">
-		<h3>
-			<?php echo JTEXT::_('JGLOBAL_SUBCATEGORIES'); ?>
-		</h3>
-
 		<?php echo $this->loadTemplate('children'); ?>
 	</div>
 	<?php endif; ?>
