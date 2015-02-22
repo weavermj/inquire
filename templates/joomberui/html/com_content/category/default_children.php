@@ -24,22 +24,37 @@ JHtml::_('bootstrap.tooltip');
 
 		<div<?php echo $class; ?>>
 			<?php $class = ''; ?>
-			<h3 class="page-header item-title"><a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($child->id));?>">
-				<?php echo $this->escape($child->title); ?></a>
-				<?php if ( $this->params->get('show_cat_num_articles', 1)) : ?>
-				<span class="badge badge-info tip hasTooltip" title="<?php echo JText::_('COM_CONTENT_NUM_ITEMS'); ?>">
-					<?php echo $child->getNumItems(true); ?>
-				</span>
-				<?php endif; ?>
-			</h3>
-			<?php if ($this->params->get('show_subcat_desc') == 1) :?>
-			<?php if ($child->description) : ?>
-				<div class="category-desc">
-					<?php echo JHtml::_('content.prepare', $child->description, '', 'com_content.category'); ?>
-				</div>
-			<?php endif; ?>
-			<?php endif; ?>
 
+						
+			<?php
+			$image = json_decode($child->params)->{'image'};
+			
+			if (!$image) : ?>
+				<h3 class="page-header item-title">
+					<a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($child->id)); ?>">
+						<?php echo $this->escape($child->title); ?>
+					</a>
+					<?php if ( $this->params->get('show_cat_num_articles', 1)) : ?>
+					<span class="badge badge-info tip hasTooltip" title="<?php echo JText::_('COM_CONTENT_NUM_ITEMS'); ?>">
+						<?php echo $child->getNumItems(true); ?>
+					</span>
+					<?php endif; ?>
+				</h3>
+				<?php if ($this->params->get('show_subcat_desc') == 1) :?>
+					<?php if ($child->description) : ?>
+						<div class="category-desc">
+							<?php echo JHtml::_('content.prepare', $child->description, '', 'com_content.category'); ?>
+						</div>
+					<?php endif; ?>
+				<?php endif; ?>
+				
+			<?php else: ?>
+				<a class="image-wrapper" href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($child->id)); ?>">
+					<img src="<?php echo htmlspecialchars($image); ?>">
+					<span class="image-text"><?php echo $this->escape($child->title); ?></span>
+				</a>
+			<?php endif; ?>
+						
 			</div>
 		<?php endif; ?>
 	<?php endforeach; ?>
