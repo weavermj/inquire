@@ -9,6 +9,9 @@ defined('_JEXEC') or die;
 
 jimport('joomla.plugin.plugin');
 
+// Added this to load the language in the front end
+JFactory::getLanguage()->load('plg_user_domainrestriction');
+
 class plgUserDomainRestriction extends JPlugin {
 
     public $_tlds;
