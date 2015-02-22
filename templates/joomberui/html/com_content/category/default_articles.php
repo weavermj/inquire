@@ -73,13 +73,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 					<?php endif; ?>
 					<strong class="list-title"><?php
 						$images  = json_decode($article->images);
-						if ($images->image_intro_caption) :
-							$caption = $images->image_intro_caption;
-						else:
-							$caption = 'Awaiting Image';
-						endif; ?>
-
-						<?php if (!$images->image_intro) : ?>
+						if (!$images->image_intro) : ?>
 							<h3>
 								<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid)); ?>">
 									<?php echo $this->escape($article->title); ?>
@@ -131,17 +125,19 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 				<?php else : // Show unauth links. ?>
 					<span>
 						<?php
-							echo $this->escape($article->title).' : ';
-							$menu		= JFactory::getApplication()->getMenu();
-							$active		= $menu->getActive();
-							$itemId		= $active->id;
-							$link = JRoute::_('index.php?option=com_users&view=login&Itemid='.$itemId);
-							$returnURL = JRoute::_(ContentHelperRoute::getArticleRoute($article->slug));
-							$fullURL = new JURI($link);
-							$fullURL->setVar('return', base64_encode($returnURL));
-						?>
-						<a href="<?php echo $fullURL; ?>" class="register">
-							<?php echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE'); ?></a>
+						$images  = json_decode($article->images);
+						if (!$images->image_intro) : ?>
+							<h3>
+								<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid)); ?>">
+									<?php echo $this->escape($article->title); ?>
+								</a>
+							</h3>
+						<?php else: ?>
+							<a class="image-wrapper" href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid)); ?>">
+								<img title="<?php echo htmlspecialchars($images->image_intro_caption); ?>" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo htmlspecialchars($images->image_intro_alt); ?>">
+								<span class="image-text"><?php echo $this->escape($article->title); ?></span>
+							</a>
+						<?php endif; ?>
 					</span>
 				<?php endif; ?>
 				</li>
