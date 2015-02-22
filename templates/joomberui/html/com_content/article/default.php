@@ -24,7 +24,7 @@ $info = $this->item->params->get('info_block_position', 0);
 <?php if ($this->params->get('show_page_heading', 1)) : ?>
 <section>
 	<header class="page-header">
-		<h1><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
+		<h1><?php //echo $this->escape($this->params->get('page_heading')); ?></h1>
 	</header>
 	<?php endif;
 if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item->paginationposition && $this->item->paginationrelative)
@@ -146,7 +146,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 				<?php endif; ?>
 		</figure>
 	<?php endif; ?>
-  
+
 	<?php
 	if (!empty($this->item->pagination) AND $this->item->pagination AND !$this->item->paginationposition AND !$this->item->paginationrelative):
 		echo $this->item->pagination;
@@ -215,7 +215,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 	<?php if (isset($urls) AND ((!empty($urls->urls_position) AND ($urls->urls_position == '1')) OR ($params->get('urls_position') == '1'))): ?>
 	<?php echo $this->loadTemplate('links'); ?>
 	<?php endif; ?>
-    
+
 	<?php //optional teaser intro text for guests ?>
 	<?php elseif ($params->get('show_noauth') == true and  $user->get('guest') ) : ?>
 	<?php echo $this->item->introtext; ?>
