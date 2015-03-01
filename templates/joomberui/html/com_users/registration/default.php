@@ -27,7 +27,7 @@ JHtml::_('behavior.formvalidation');
 		<fieldset>
 		<?php if (isset($fieldset->label)):// If the fieldset has a label set, display it as the legend.
 		?>
-			<legend>Your details</legend>
+			<legend><?php echo JText::_($fieldset->label);?></legend>
 		<?php endif;?>
 		<?php foreach ($fields as $field) :// Iterate through the fields in the set and display them.?>
 			<?php if ($field->hidden):// If the field is hidden, just display the input.?>
@@ -36,9 +36,6 @@ JHtml::_('behavior.formvalidation');
 				<div class="control-group">
 					<div class="control-label">
 					<?php echo $field->label; ?>
-					<?php if (!$field->required && $field->type != 'Spacer') : ?>
-						<span class="optional"><?php echo JText::_('COM_USERS_OPTIONAL');?></span>
-					<?php endif; ?>
 					</div>
 					<div class="controls">
 						<?php echo $field->input;?>
