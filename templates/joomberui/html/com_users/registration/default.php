@@ -55,3 +55,15 @@ JHtml::_('behavior.formvalidation');
 		</div>
 	</form>
 </div>
+
+<script>
+	// Populates username field with email address and hides the username field
+	// var usernameLabel = jQuery('#jform_username-lbl');
+	// var usernameField = jQuery('#jform_username');
+	// var emailField = jQuery('#jform_email1');
+	// emailField.on('blur', function (e) {
+	// 	usernameField.val(e.target.value);
+	// });
+	// usernameLabel.hide();
+	// usernameField.hide();
+</script>

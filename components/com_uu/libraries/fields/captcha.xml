@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params>
+        <param name="recaptcha_public" type="text" default="" label="Recaptcha Public Key" description="" />
+        <param name="recaptcha_private" type="text" default="" label="Recaptcha Private Key" description="" />
+        <param name="theme" type="list" default="0" label="Theme" description="Define which theme use for reCaptcha">
+            <option value="clean" name='Clean'>Clean</option>
+            <option value="white" name='White'>White</option>
+            <option value="blackglass" name='BlackGlass'>BlackGlass</option>
+            <option value="red" name='Red'>Red</option>
+        </param>
+	</params>
+</config>

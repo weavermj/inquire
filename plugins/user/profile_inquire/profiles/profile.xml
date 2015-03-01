@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="profile_inquire">
+		<fieldset name="profile_inquire"
+			label="PLG_USER_PROFILE_INQUIRE_SLIDER_LABEL"
+		>
+			<field
+				name="sponsor"
+				type="text"
+				id="sponsor"
+				description="PLG_USER_PROFILE_INQUIRE_FIELD_SPONSOR_DESC"
+				filter="string"
+				label="PLG_USER_PROFILE_INQUIRE_FIELD_SPONSOR_LABEL"
+				size="30"
+			/>
+		</fieldset>
+	</fields>
+</form>

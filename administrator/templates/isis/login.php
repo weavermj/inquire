@@ -3,28 +3,33 @@
  * @package     Joomla.Administrator
  * @subpackage  Templates.isis
  *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
 
-$app = JFactory::getApplication();
-$doc = JFactory::getDocument();
+$app  = JFactory::getApplication();
+$doc  = JFactory::getDocument();
 $lang = JFactory::getLanguage();
+
+// Color Params
+$headerColor   = $this->params->get('headerColor', '#184A7D');
+$templateColor = $this->params->get('templateColor', '#13294A');
 
 // Add JavaScript Frameworks
 JHtml::_('bootstrap.framework');
 JHtml::_('bootstrap.tooltip');
 
 // Add Stylesheets
-$doc->addStyleSheet('templates/' .$this->template. '/css/template.css');
+$doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/template.css');
 
 // Load optional RTL Bootstrap CSS
 JHtml::_('bootstrap.loadCss', false, $this->direction);
 
 // Load specific language related CSS
 $file = 'language/' . $lang->getTag() . '/' . $lang->getTag() . '.css';
+
 if (is_file($file))
 {
 	$doc->addStyleSheet($file);
@@ -51,6 +56,14 @@ $sitename = $app->get('sitename');
             });
 	</script>
 	<style type="text/css">
+		.view-login {
+			background-color: <?php echo $templateColor; ?>;
+			background-image: -webkit-gradient(radial,center center,0,center center,460,from(<?php echo $headerColor; ?>),to(<?php echo $templateColor; ?>));
+			background-image: -webkit-radial-gradient(circle,<?php echo $headerColor; ?>,<?php echo $templateColor; ?>);
+			background-image: -moz-radial-gradient(circle,<?php echo $headerColor; ?>,<?php echo $templateColor; ?>);
+			background-image: -o-radial-gradient(circle,<?php echo $headerColor; ?>,<?php echo $templateColor; ?>);
+			background-repeat: no-repeat;
+		}
 		/* Responsive Styles */
 		@media (max-width: 480px) {
 			.view-login .container {
@@ -75,23 +88,27 @@ $sitename = $app->get('sitename');
 		<?php endif; ?>
 	</style>
 	<!--[if lt IE 9]>
-		<script src="../media/jui/js/html5.js"></script>
+		<script src="<?php echo JUri::root(true); ?>/media/jui/js/html5.js"></script>
 	<![endif]-->
 </head>
 
-<body class="site <?php echo $option . " view-" . $view . " layout-" . $layout . " task-" . $task . " itemid-" . $itemid . " ";?>">
+<body class="site <?php echo $option . " view-" . $view . " layout-" . $layout . " task-" . $task . " itemid-" . $itemid . " "; ?>">
 	<!-- Container -->
 	<div class="container">
 		<div id="content">
 			<!-- Begin Content -->
 			<div id="element-box" class="login well">
-				<img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template ?>/images/joomla.png" alt="Joomla!" />
+				<?php if ($loginLogoFile = $this->params->get('loginLogoFile')) : ?>
+					<img src="<?php echo JUri::root() . $loginLogoFile; ?>" alt="<?php echo $sitename; ?>" />
+				<?php else: ?>
+					<img src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/images/joomla.png" alt="<?php echo $sitename; ?>" />
+				<?php endif; ?>
 				<hr />
 				<jdoc:include type="message" />
 				<jdoc:include type="component" />
 			</div>
 			<noscript>
-				<?php echo JText::_('JGLOBAL_WARNJAVASCRIPT') ?>
+				<?php echo JText::_('JGLOBAL_WARNJAVASCRIPT'); ?>
 			</noscript>
 			<!-- End Content -->
 		</div>
@@ -100,8 +117,8 @@ $sitename = $app->get('sitename');
 		<p class="pull-right">
 			&copy; <?php echo date('Y'); ?> <?php echo $sitename; ?>
 		</p>
-		<a class="login-joomla" href="http://www.joomla.org" target="_blank" class="hasTooltip" title="<?php echo JHtml::tooltipText('TPL_ISIS_ISFREESOFTWARE');?>">Joomla!&#174;</a>
-		<a href="<?php echo JUri::root(); ?>" target="_blank" class="pull-left"><i class="icon-share icon-white"></i> <?php echo JText::_('COM_LOGIN_RETURN_TO_SITE_HOME_PAGE') ?></a>
+		<a class="login-joomla hasTooltip" href="http://www.joomla.org" target="_blank" title="<?php echo JHtml::tooltipText('TPL_ISIS_ISFREESOFTWARE'); ?>">Joomla!&#174;</a>
+		<a href="<?php echo JUri::root(); ?>" target="_blank" class="pull-left"><i class="icon-share icon-white"></i> <?php echo JText::_('COM_LOGIN_RETURN_TO_SITE_HOME_PAGE'); ?></a>
 	</div>
 	<jdoc:include type="modules" name="debug" style="none" />
 </body>

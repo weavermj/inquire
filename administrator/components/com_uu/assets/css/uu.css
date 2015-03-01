@@ -1,0 +1,35 @@
+.icon-48-users {
+      background-image: url(../images/icon-48-users.png);
+      padding-left:60px!important;
+}
+
+.icon-48-user {
+      background-image: url(../images/icon-48-users.png);
+      padding-left:60px!important;
+}
+
+.icon-48-fields{
+    background-image: url(../images/icon-48-fields.png);
+}
+
+.icon-32-csv{
+    background-image:url(../images/icon-48-csv.png);
+}
+table.adminlist tbody tr.row-group td {
+    background-color: #eeeeee;
+    vertical-align: middle;
+    padding: 7px;;
+}
+
+table.adminlist tbody tr.row-field td {
+    background-color: #ffffff;
+    vertical-align: middle;
+}
+
+table.adminlist tbody tr.row-field td.field-name {
+    padding-left: 20px;
+}
+
+fieldset#jform_params_readonly.radio.btn-group{
+    padding-top: 0;
+}

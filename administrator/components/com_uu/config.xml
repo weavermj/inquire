@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="component"
+		label="COM_UU_COMPONENT_LABEL"
+		description="COM_UU_COMPONENT_DESC"
+	>
+
+	</fieldset>
+
+	<fieldset name="permissions"
+		description="JCONFIG_PERMISSIONS_DESC"
+		label="JCONFIG_PERMISSIONS_LABEL"
+	>
+
+		<field name="rules" type="rules"
+			component="com_uu"
+			filter="rules"
+			validate="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			section="component" />
+	</fieldset>
+
+    <param name="downloadid" type="text" default="" size="30"
+           label="Download ID"
+           description ="Enter your Download ID to enable Live Updates" />
+</config>
+

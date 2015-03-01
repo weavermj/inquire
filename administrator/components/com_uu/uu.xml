@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+    <name>com_uu</name>
+    <creationDate>2014-12-11</creationDate>
+    <copyright>Copyright (C) 2012. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Stéphane Bouey</author>
+    <authorEmail>stephane.bouey@faboba.com</authorEmail>
+    <authorUrl>http://www.faboba.com</authorUrl>
+    <version>1.4.1</version>
+    <description>COM_UU_XML_DESCRIPTION</description>
+
+    <!-- Installation / uninstallation script file -->
+    <scriptfile>script.php</scriptfile>
+
+    <!-- SQL query files to execute on installation -->
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install/mysql/install.sql</file>
+        </sql>
+    </install>
+
+    <!-- SQL query files to execute on uninstallation -->
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install/mysql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+
+
+    <!-- SQL files to run on update -->
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>uu.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>assets</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>libraries</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+    </files>
+    <languages folder="site">
+        <language tag="en-GB">language/en-GB/en-GB.com_uu.ini
+        </language>
+    </languages>
+
+    <administration>
+        <menu img="components/com_uu/assets/images/icon-16-user.png" >COM_UU</menu>
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>uu.php</filename>
+            <folder>assets</folder>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>legacy</folder>
+            <folder>liveupdate</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/en-GB.com_uu.ini
+            </language>
+            <language tag="en-GB">language/en-GB/en-GB.com_uu.sys.ini
+            </language>
+        </languages>
+    </administration>
+</extension>
+

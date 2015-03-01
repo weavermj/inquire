@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fields>
+    <field>
+        <type>text</type>
+        <name>Textbox</name>
+    </field>
+    <field>
+        <type>textarea</type>
+        <name>Textarea</name>
+    </field>
+    <field>
+        <type>select</type>
+        <name>Select</name>
+    </field>
+    <field>
+        <type>checkbox</type>
+        <name>Checkbox</name>
+    </field>
+    <field>
+        <type>radio</type>
+        <name>Radio</name>
+    </field>
+    <field>
+        <type>email</type>
+        <name>Email</name>
+    </field>
+    <field>
+        <type>captcha</type>
+        <name>Captcha</name>
+    </field>
+</fields>
