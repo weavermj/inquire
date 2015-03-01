@@ -52,7 +52,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 	</div>
 	<?php endif; ?>
 
-	<ul class="category list-striped list-condensed small-block-grid-2 medium-block-grid-2 large-block-grid-4">
+	<ul class="category list-striped list-condensed">
 
 		<?php foreach ($this->items as $i => $article) : ?>
 			<?php if ($this->items[$i]->state == 0) : ?>
@@ -90,7 +90,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 					<?php if ($this->items[$i]->state == 0): ?>
 						<span class="label label-warning">Unpublished</span>
 					<?php endif; ?>
-					<br />
+					
 
 						<?php if ($this->params->get('list_show_author', 1)) : ?>
 						<div class="list-author">

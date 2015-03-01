@@ -220,3 +220,17 @@ div.icons {
 }
 
 /* ***************** */
+
+/* Category list */
+
+ul.category {
+    list-style-type: none;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+ul.category li {
+
+}
+
+/* ***************** */
