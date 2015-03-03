@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config
+    addrulepath="/administrator/components/com_dropfiles/models/rules"
+    addfieldpath="/administrator/components/com_dropfiles/models/fields"
+>
+        <fieldset
+		name="main"
+		label="COM_DROPFILES_CONFIG_MAIN_LABEL"
+		description="COM_DROPFILES_CONFIG_MAIN_DESC"
+		>
+                <field name="updated" type="hidden" default="1"/>
+		<field
+			name="jquerybase"
+			type="radio"
+                        label="COM_DROPFILES_CONFIG_INCJQUERYBASE_LABEL"
+                        description="COM_DROPFILES_CONFIG_INCJQUERYBASE_DESC"
+                        class="btn-group"
+                        default="1">
+                            <option value="1">JYES</option>
+                            <option value="0">JNO</option>
+                </field>
+                <field 
+                        name="allowedext"
+                        type="text"
+                        label="COM_DROPFILES_CONFIG_ALLOWEDEXT_LABEL"
+                        description="COM_DROPFILES_CONFIG_ALLOWEDEXT_DESC"
+                        default="7z,ace,bz2,dmg,gz,rar,tgz,zip,csv,doc,docx,html,key,keynote,odp,ods,odt,pages,pdf,pps,ppt,pptx,rtf,tex,txt,xls,xlsx,xml,bmp,exif,gif,ico,jpeg,jpg,png,psd,tif,tiff,aac,aif,aiff,alac,amr,au,cdda,flac,m3u,m4a,m4p,mid,mp3,mp4,mpa,ogg,pac,ra,wav,wma,3gp,asf,avi,flv,m4v,mkv,mov,mpeg,mpg,rm,swf,vob,wmv"
+                        size="100"
+                />
+                <field
+                        name="usegoogleviewer"
+                        type="list"
+                        label="COM_DROPFILES_CONFIG_USEGOOGLEVIEWER_LABEL"
+                        description="COM_DROPFILES_CONFIG_USEGOOGLEVIEWER_DESC"
+                        class="btn-group"
+                        default="1">
+                            <option value="1">COM_DROPFILES_CONFIG_USEGOOGLEVIEWER_LIGHTBOX</option>
+                            <option value="2">COM_DROPFILES_CONFIG_USEGOOGLEVIEWER_BLANK</option>
+                            <option value="0">JNO</option>
+                </field>
+                <field 
+                        name="allowedgoogleext"
+                        type="text"
+                        label="COM_DROPFILES_CONFIG_ALLOWEDGOOGLEEXT_LABEL"
+                        description="COM_DROPFILES_CONFIG_ALLOWEDGOOGLEEXT_DESC"
+                        default="pdf,ppt,doc,xls,dxf,ps,eps,xps,psd,tif,tiff,bmp,svg,pages,ai,dxf,ttf,txt"
+                        size="100"
+                />
+                <field 
+                        name="maxinputfile"
+                        type="text"
+                        label="COM_DROPFILES_CONFIG_MAXINPUTFILE_LABEL"
+                        description="COM_DROPFILES_CONFIG_MAXINPUTFILE_DESC"
+                        default="10"
+                        size="4"
+                        requried="true"
+                />
+                <field
+                        name="import"
+                        type="radio"
+                        label="COM_DROPFILES_CONFIG_IMPORT_LABEL"
+                        description="COM_DROPFILES_CONFIG_IMPORT_DESC"
+                        class="btn-group"
+                        default="0">
+                            <option value="1">JYES</option>
+                            <option value="0">JNO</option>
+                </field>
+                <field
+                        name="uri"
+                        type="text"
+                        label="COM_DROPFILES_CONFIG_URI_LABEL"
+                        description="COM_DROPFILES_CONFIG_URI_DESC"
+                        default="files" />
+                <field
+			name="catcollapsed"
+			type="radio"
+                        label="COM_DROPFILES_CONFIG_CATCOLLAPSE_LABEL"
+                        description="COM_DROPFILES_CONFIG_CATCOLLAPSE_DESC"
+                        class="btn-group"
+                        default="0">
+                            <option value="1">JYES</option>
+                            <option value="0">JNO</option>
+                </field>
+                <field
+			name="hideupdate"
+			type="radio"
+                        label="COM_DROPFILES_CONFIG_HIDEUPDATE_LABEL"
+                        description="COM_DROPFILES_CONFIG_HIDEUPDATE_DESC"
+                        class="btn-group"
+                        default="0">
+                            <option value="1">JYES</option>
+                            <option value="0">JNO</option>
+                </field>
+        </fieldset>
+        <fieldset
+		name="cloud"
+		label="COM_DROPFILES_CONFIG_CLOUD_GOOGLE_LABEL"
+		description="COM_DROPFILES_CONFIG_CLOUD_GOOGLE_DESC"
+		>
+            <field
+                name="google_client_id"
+                type="text"
+                label="COM_DROPFILES_CONFIG_CLOUD_GOOGLE_CLIENT_ID_LABEL"
+                description="COM_DROPFILES_CONFIG_CLOUD_GOOGLE_CLIENT_ID_DESC"
+                default="" />
+            <field
+                name="google_client_secret"
+                type="text"
+                label="COM_DROPFILES_CONFIG_CLOUD_GOOGLE_CLIENT_SECRET_LABEL"
+                description="COM_DROPFILES_CONFIG_CLOUD_GOOGLE_CLIENT_SECRET_DESC"
+                default="" />
+            <field
+                name="google_credentials"
+                type="hidden"
+                default="" />
+            <field
+                name="google_base_folder"
+                type="hidden"
+                default="" />
+        </fieldset>
+        <fieldset
+		name="advanced"
+		label="COM_DROPFILES_CONFIG_ADVANCED_LABEL"
+		description="COM_DROPFILES_CONFIG_ADVANCED_DESC"
+        >
+            <field
+                    name="readfiletype"
+                    type="list"
+                    label="COM_DROPFILES_CONFIG_ADVANCED_READFILETYPE_LABEL"
+                    description="COM_DROPFILES_CONFIG_ADVANCED_READFILETYPE_LABEL"
+                    class="btn-group"
+                    default="0">
+                        <option value="0">COM_DROPFILES_CONFIG_ADVANCED_READFILETYPE_READFILE</option>
+                        <option value="1">COM_DROPFILES_CONFIG_ADVANCED_READFILETYPE_FREAD</option>
+            </field>
+        </fieldset>
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			filter="rules"
+			validate="rules"
+			component="com_dropfiles"
+			section="component" />
+	</fieldset>        
+</config>

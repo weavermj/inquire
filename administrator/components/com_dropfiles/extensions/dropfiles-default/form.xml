@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    	<fields name="params">
+		<fieldset name="params" mainpart="true" addrulepath="/administrator/components/com_dropfiles/models/rules" addfieldpath="/administrator/components/com_dropfiles/models/fields">
+                    
+			<field name="marginleft"
+                            type="margin" 
+                            stype="marginleft"
+                            default="0" 
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_LEFT_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_LEFT_DESC"
+                            message="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_LEFT_MSG"
+                            validate="integer"
+                            />
+			
+			<field name="margintop"
+                            type="margin" 
+                            stype="margintop"
+                            default="0" 
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_TOP_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_TOP_DESC"
+                            message="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_TOP_MSG"
+                            validate="integer"
+                            />
+			<field name="marginright"
+                            type="margin" 
+                            stype="marginright"
+                            default="0" 
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_RIGHT_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_RIGHT_DESC"
+                            message="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_RIGHT_MSG"
+                            validate="integer"
+                            />
+			
+			<field name="marginbottom"
+                            type="margin" 
+                            stype="marginbottom"
+                            default="0" 
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_BOTTOM_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_BOTTOM_DESC"
+                            message="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_BOTTOM_MSG"
+                            validate="integer"
+                            />
+			<field
+                            name="showsize"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_SIZE_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_SIZE_DESC"
+                            default="1"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+			<field
+                            name="showtitle"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_TITLE_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_TITLE_DESC"
+                            default="1"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+			<field
+                            name="showversion"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_VERSION_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_VERSION_DESC"
+                            default="1"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+			<field
+                            name="showhits"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_HITS_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_HITS_DESC"
+                            default="1"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+			<field
+                            name="showdownload"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_DOWNLOAD_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_DOWNLOAD_DESC"
+                            default="1"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+			<field
+                            name="showdateadd"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_DATEADD_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_DATEADD_DESC"
+                            default="1"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+			<field
+                            name="showdatemodified"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_DATEMODIFIED_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_DATEMODIFIED_DESC"
+                            default="1"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+                        <field
+                            name="showsubcategories"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_SUBCATEGORIES_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_SUBCATEGORIES_DESC"
+                            default="1"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+                        <field
+                            name="showcategorytitle"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_CATEGORYTITLE_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_CATEGORYTITLE_DESC"
+                            default="1"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+                        <field 
+                            name="sliderinit"
+                            type="sliderinit" />
+                            
+		</fieldset>
+	</fields>	
+    
+</form>

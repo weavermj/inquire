@@ -1,0 +1,111 @@
+/** 
+ * Dropfiles
+ * 
+ * We developed this code with our hearts and passion.
+ * We hope you found it useful, easy to understand and to customize.
+ * Otherwise, please feel free to contact us at contact@joomunited.com *
+ * @package Dropfiles
+ * @copyright Copyright (C) 2013 JoomUnited (http://www.joomunited.com). All rights reserved.
+ * @copyright Copyright (C) 2013 Damien Barrère (http://www.crac-design.com). All rights reserved.
+ * @license GNU General Public License version 2 or later; http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+.dropfiles-content.dropfiles-content-default .file {
+    min-height: 80px;
+    clear: right;
+}
+
+.dropfiles-content.dropfiles-content-default .file > div.ext {
+    height: 80px;
+    width: 84px;
+    float: left;
+    background: url(images/all2.png) center center transparent no-repeat;
+    color: #fff;  
+    position: relative;
+}
+.dropfiles-content.dropfiles-content-default .file > div.ext.ai {background-image : url(images/ai.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.avi {background-image : url(images/avi.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.css {background-image : url(images/css.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.dll {background-image : url(images/dll.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.doc {background-image : url(images/doc.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.docx {background-image : url(images/doc.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.fla {background-image : url(images/fla.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.flv {background-image : url(images/flv.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.gif {background-image : url(images/gif.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.html {background-image : url(images/html.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.iso {background-image : url(images/iso.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.jpg {background-image : url(images/jpg.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.mov {background-image : url(images/mov.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.mpg {background-image : url(images/mpg.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.ogg {background-image : url(images/ogg.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.pdf {background-image : url(images/pdf.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.php {background-image : url(images/php.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.png {background-image : url(images/png.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.ppt {background-image : url(images/ppt.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.pptx {background-image : url(images/ppt.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.psd {background-image : url(images/psd.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.raw {background-image : url(images/raw.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.sql {background-image : url(images/sql.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.svg {background-image : url(images/svg.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.txt {background-image : url(images/txt.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.wav {background-image : url(images/wav.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.wmv {background-image : url(images/wmv.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.xls {background-image : url(images/xls.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.xlxs {background-image : url(images/xls.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.xml {background-image : url(images/xml.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext.zip {background-image : url(images/zip.png); color: transparent;}
+.dropfiles-content.dropfiles-content-default .file > div.ext .txt {
+    position: absolute;
+    top: 48px;
+    left: 7px;
+    display: block;
+    width: 35px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    font-family: arial, helvetica, sans-serif;
+}
+.dropfiles-content.dropfiles-content-default .filecontent {
+    margin-left: 85px;
+}
+.dropfiles-content.dropfiles-content-default .file .downloadblock {
+    float: right;
+    padding-top: 10px;
+    text-align: right;
+}
+
+.dropfiles-content.dropfiles-content-default .file span {
+    font-weight: bold;
+}
+
+.dropfiles-content.dropfiles-content-default h3 {
+    padding-top: 10px;
+}
+
+.dropfiles-content.dropfiles-content-default .dropfilescategory {
+    color: #888888;
+    font-size: 15px;
+    padding: 10px;
+    text-decoration: none;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+    border: solid #eeeeee 0px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#eeeeee), to(#eeeeee));
+    background: -moz-linear-gradient(top, #eeeeee, #eeeeee);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#eeeeee, endColorStr=#eeeeee);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#eeeeee, endColorStr=#eeeeee);
+    display:inline-block; /* IE is so silly */
+}
+
+.dropfiles-content.dropfiles-content-default .dropfilescategory:hover {
+    -webkit-box-shadow: 0px 1px 3px #888888;
+    -moz-box-shadow: 0px 1px 3px #888888;
+    box-shadow: 0px 1px 3px #888888;
+}
+
+.dropfiles-content.dropfiles-content-default .backcategory {
+    float: right;
+}

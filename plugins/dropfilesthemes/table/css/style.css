@@ -1,0 +1,235 @@
+/** 
+ * Dropfiles
+ * 
+ * We developed this code with our hearts and passion.
+ * We hope you found it useful, easy to understand and to customize.
+ * Otherwise, please feel free to contact us at contact@joomunited.com *
+ * @package Dropfiles
+ * @copyright Copyright (C) 2013 JoomUnited (http://www.joomunited.com). All rights reserved.
+ * @copyright Copyright (C) 2013 Damien Barrère (http://www.crac-design.com). All rights reserved.
+ * @license GNU General Public License version 2 or later; http://www.gnu.org/licenses/gpl-2.0.html
+ */
+.dropfiles-content-table.dropfiles-content tr, .dropfiles-content-table.dropfiles-content td, .dropfiles-content-table.dropfiles-content thead, .dropfiles-content-table.dropfiles-content tbody, .dropfiles-content-table.dropfiles-content th {
+    border: none;
+}
+
+.dropfiles-content-table.dropfiles-content table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0; 
+}
+.dropfiles-content-table.dropfiles-content .table {
+  width: 100%;
+  margin-bottom: 20px; 
+  -webkit-box-shadow: 0 1px 1px #ccc;
+     -moz-box-shadow: 0 1px 1px #ccc;
+          box-shadow: 0 1px 1px #ccc;
+}
+.dropfiles-content-table.dropfiles-content .table th,
+.dropfiles-content-table.dropfiles-content .table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd; }
+.dropfiles-content-table.dropfiles-content .table th {
+  font-weight: bold; 
+  border-bottom: 1px solid #CCC;
+background-color: #eee;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+background-image: -moz-linear-gradient(top, #f5f5f5, #eee);
+background-image: -ms-linear-gradient(top, #f5f5f5, #eee);
+background-image: -o-linear-gradient(top, #f5f5f5, #eee);
+background-image: linear-gradient(top, #f5f5f5, #eee);
+}
+.dropfiles-content-table.dropfiles-content .table thead th {
+  vertical-align: bottom; }
+.dropfiles-content-table.dropfiles-content .table caption + thead tr:first-child th,
+.dropfiles-content-table.dropfiles-content .table caption + thead tr:first-child td,
+.dropfiles-content-table.dropfiles-content .table colgroup + thead tr:first-child th,
+.dropfiles-content-table.dropfiles-content .table colgroup + thead tr:first-child td,
+.dropfiles-content-table.dropfiles-content .table thead:first-child tr:first-child th,
+.dropfiles-content-table.dropfiles-content .table thead:first-child tr:first-child td {
+  border-top: 0; }
+.dropfiles-content-table.dropfiles-content .table tbody + tbody {
+  border-top: 2px solid #dddddd; }
+.dropfiles-content-table.dropfiles-content .table .table {
+  background-color: #ffffff; }
+.dropfiles-content-table.dropfiles-content .table-condensed th,
+.dropfiles-content-table.dropfiles-content .table-condensed td {
+  padding: 4px 5px; }
+.dropfiles-content-table.dropfiles-content .table-bordered {
+  border: 1px solid #dddddd;
+  border-collapse: separate;
+  *border-collapse: collapse;
+  border-left: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+.dropfiles-content-table.dropfiles-content .table-bordered th,
+.dropfiles-content-table.dropfiles-content .table-bordered td {
+  border-left: 1px solid #dddddd; }
+.dropfiles-content-table.dropfiles-content .table-bordered caption + thead tr:first-child th,
+.dropfiles-content-table.dropfiles-content .table-bordered caption + tbody tr:first-child th,
+.dropfiles-content-table.dropfiles-content .table-bordered caption + tbody tr:first-child td,
+.dropfiles-content-table.dropfiles-content .table-bordered colgroup + thead tr:first-child th,
+.dropfiles-content-table.dropfiles-content .table-bordered colgroup + tbody tr:first-child th,
+.dropfiles-content-table.dropfiles-content .table-bordered colgroup + tbody tr:first-child td,
+.dropfiles-content-table.dropfiles-content .table-bordered thead:first-child tr:first-child th,
+.dropfiles-content-table.dropfiles-content .table-bordered tbody:first-child tr:first-child th,
+.dropfiles-content-table.dropfiles-content .table-bordered tbody:first-child tr:first-child td {
+  border-top: 0; }
+.dropfiles-content-table.dropfiles-content .table-bordered thead:first-child tr:first-child > th:first-child,
+.dropfiles-content-table.dropfiles-content .table-bordered tbody:first-child tr:first-child > td:first-child,
+.dropfiles-content-table.dropfiles-content .table-bordered tbody:first-child tr:first-child > th:first-child {
+  -webkit-border-top-left-radius: 1px;
+  -moz-border-radius-topleft: 1px;
+  border-top-left-radius: 1px; }
+.dropfiles-content-table.dropfiles-content .table-bordered thead:first-child tr:first-child > th:last-child,
+.dropfiles-content-table.dropfiles-content .table-bordered tbody:first-child tr:first-child > td:last-child,
+.dropfiles-content-table.dropfiles-content .table-bordered tbody:first-child tr:first-child > th:last-child {
+  -webkit-border-top-right-radius: 1px;
+  -moz-border-radius-topright: 1px;
+  border-top-right-radius: 1px; }
+.dropfiles-content-table.dropfiles-content .table-bordered thead:last-child tr:last-child > th:first-child,
+.dropfiles-content-table.dropfiles-content .table-bordered tbody:last-child tr:last-child > td:first-child,
+.dropfiles-content-table.dropfiles-content .table-bordered tbody:last-child tr:last-child > th:first-child,
+.dropfiles-content-table.dropfiles-content .table-bordered tfoot:last-child tr:last-child > td:first-child,
+.dropfiles-content-table.dropfiles-content .table-bordered tfoot:last-child tr:last-child > th:first-child {
+  -webkit-border-bottom-left-radius: 1px;
+  -moz-border-radius-bottomleft: 1px;
+  border-bottom-left-radius: 1px; }
+.dropfiles-content-table.dropfiles-content .table-bordered thead:last-child tr:last-child > th:last-child,
+.dropfiles-content-table.dropfiles-content .table-bordered tbody:last-child tr:last-child > td:last-child,
+.dropfiles-content-table.dropfiles-content .table-bordered tbody:last-child tr:last-child > th:last-child,
+.dropfiles-content-table.dropfiles-content .table-bordered tfoot:last-child tr:last-child > td:last-child,
+.dropfiles-content-table.dropfiles-content .table-bordered tfoot:last-child tr:last-child > th:last-child {
+  -webkit-border-bottom-right-radius: 1px;
+  -moz-border-radius-bottomright: 1px;
+  border-bottom-right-radius: 1px; }
+.dropfiles-content-table.dropfiles-content .table-bordered tfoot + tbody:last-child tr:last-child td:first-child {
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-bottom-left-radius: 0; }
+.dropfiles-content-table.dropfiles-content .table-bordered tfoot + tbody:last-child tr:last-child td:last-child {
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  border-bottom-right-radius: 0; }
+.dropfiles-content-table.dropfiles-content .table-bordered caption + thead tr:first-child th:first-child,
+.dropfiles-content-table.dropfiles-content .table-bordered caption + tbody tr:first-child td:first-child,
+.dropfiles-content-table.dropfiles-content .table-bordered colgroup + thead tr:first-child th:first-child,
+.dropfiles-content-table.dropfiles-content .table-bordered colgroup + tbody tr:first-child td:first-child {
+  -webkit-border-top-left-radius: 1px;
+  -moz-border-radius-topleft: 1px;
+  border-top-left-radius: 1px; }
+.dropfiles-content-table.dropfiles-content .table-bordered caption + thead tr:first-child th:last-child,
+.dropfiles-content-table.dropfiles-content .table-bordered caption + tbody tr:first-child td:last-child,
+.dropfiles-content-table.dropfiles-content .table-bordered colgroup + thead tr:first-child th:last-child,
+.dropfiles-content-table.dropfiles-content .table-bordered colgroup + tbody tr:first-child td:last-child {
+  -webkit-border-top-right-radius: 1px;
+  -moz-border-radius-topright: 1px;
+  border-top-right-radius: 1px; }
+.dropfiles-content-table.dropfiles-content .table-striped tbody > tr:nth-child(odd) > td,
+.dropfiles-content-table.dropfiles-content .table-striped tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9; }
+.dropfiles-content-table.dropfiles-content .table-hover tbody tr:hover > td,
+.dropfiles-content-table.dropfiles-content .table-hover tbody tr:hover > th {
+  background-color: #f5f5f5; }
+
+.dropfiles-content-table.dropfiles-content .extcol { text-align: center; }
+.dropfiles-content-table.dropfiles-content span.ext {background-image : url(../images/ext.png); width: 80px; height: 80px;display: block;background-repeat: no-repeat;}
+.dropfiles-content-table.dropfiles-content span.ext.pst {background-image : url(../images/pst.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.docx {background-image : url(../images/docx_win.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.doc {background-image : url(../images/docx_win.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.wmv {background-image : url(../images/wmv.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.mp3 {background-image : url(../images/mp3.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.zip {background-image : url(../images/zip.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.jpeg {background-image : url(../images/jpeg.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.jpg {background-image : url(../images/jpeg.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.readme {background-image : url(../images/readme.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.avi {background-image : url(../images/avi.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.midi {background-image : url(../images/midi.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.wav {background-image : url(../images/wav.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.accdb {background-image : url(../images/accdb.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.txt {background-image : url(../images/txt.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.eps {background-image : url(../images/eps.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.pptx {background-image : url(../images/pptx_win.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.ppt {background-image : url(../images/pptx_win.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.vsd {background-image : url(../images/vsd.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.mpeg {background-image : url(../images/mpeg.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.gif {background-image : url(../images/gif.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.rar {background-image : url(../images/rar.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.ind {background-image : url(../images/ind.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.bmp {background-image : url(../images/bmp.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.jsf {background-image : url(../images/jsf.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.tiff {background-image : url(../images/tiff.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.wma {background-image : url(../images/wma.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.pub {background-image : url(../images/pub.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.xlsx {background-image : url(../images/xlsx_win.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.xls {background-image : url(../images/xlsx_win.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.html {background-image : url(../images/html.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.proj {background-image : url(../images/proj.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.psd {background-image : url(../images/psd.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.settings {background-image : url(../images/settings.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.pdf {background-image : url(../images/pdf.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.png {background-image : url(../images/png.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.ini {background-image : url(../images/ini.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.fla {background-image : url(../images/fla.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.mov {background-image : url(../images/mov.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.url {background-image : url(../images/url.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.css {background-image : url(../images/css.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext.eml {background-image : url(../images/eml.png); color: transparent;}
+.dropfiles-content-table.dropfiles-content span.ext .txt {
+    position: absolute;
+    top: 48px;
+    left: 7px;
+    display: block;
+    width: 35px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    font-family: arial, helvetica, sans-serif;
+}
+
+a.dropfiles-content-table.dropfiles-content-single {
+    padding: 10px 15px 10px 60px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background: #979797 url(../images/download.png) 5px center no-repeat !important;
+    color: #FFF !important;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #707070;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    display: inline-block;
+    height: 50px;
+    line-height: 25px;
+    min-width: 100px;
+    text-decoration: none!important;
+}
+
+a.dropfiles-content-table.dropfiles-content-single:hover {
+    background-color: #5C5C5C !important;
+    border: solid 1px #181818!important;
+    text-decoration: none!important;
+}
+
+a.dropfiles-content-table.dropfiles-content-single:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    background-color: #5C5C5C !important;
+    border: solid 1px #181818 !important;
+    background: #5C5C5C url(../images/download.png) 5px 54% no-repeat !important;
+}

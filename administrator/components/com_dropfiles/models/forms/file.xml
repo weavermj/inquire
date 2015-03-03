@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field name="id" type="hidden" />
+	<fieldset  addrulepath="/administrator/components/com_dropfiles/models/rules" >
+		<field name="title" type="text" class="inputbox input-block-level" labelclass="control-label"
+			label="COM_DROPFILES_FIELD_FILE_TITLE_LABEL"
+			description="COM_DROPFILES_FIELD_FILE_TITLE_DESC" required="true" />
+<!--		<field name="ext" type="text" readonly="true" class="inputbox span1" labelclass="control-label"
+			label="COM_DROPFILES_FIELD_FILE_EXT_LABEL"
+			description="COM_DROPFILES_FIELD_FILE_EXT_DESC" required="false" />-->
+		<field name="description" type="textarea" class="inputbox input-block-level" labelclass="control-label"
+			label="COM_DROPFILES_FIELD_FILE_DESCRIPTION_LABEL"
+			description="COM_DROPFILES_FIELD_FILE_DESCRIPTION_DESC" required="false" filter="JComponentHelper::filterText"/>
+		<field name="version" type="text" class="inputbox input-block-level" labelclass="control-label"
+			label="COM_DROPFILES_FIELD_FILE_VERSION_LABEL"
+			description="COM_DROPFILES_FIELD_FILE_VERSION_DESC" required="false" />
+                <field name="hits" type="hits" class="inputbox dropfilesinput" labelclass="control-label"
+                       label="COM_DROPFILES_FIELD_HITS_LABEL"
+			description="COM_DROPFILES_FIELD_HITS_DESC" required="true" />
+	</fieldset>
+</form>
