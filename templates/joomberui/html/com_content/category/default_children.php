@@ -25,10 +25,10 @@ JHtml::_('bootstrap.tooltip');
 		<div<?php echo $class; ?>>
 			<?php $class = ''; ?>
 
-						
+
 			<?php
 			$image = json_decode($child->params)->{'image'};
-			
+
 			if (!$image) : ?>
 				<h3 class="page-header item-title">
 					<a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($child->id)); ?>">
@@ -47,14 +47,14 @@ JHtml::_('bootstrap.tooltip');
 						</div>
 					<?php endif; ?>
 				<?php endif; ?>
-				
+
 			<?php else: ?>
 				<a class="image-wrapper" href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($child->id)); ?>">
 					<img src="<?php echo htmlspecialchars($image); ?>">
 					<span class="image-text"><?php echo $this->escape($child->title); ?></span>
 				</a>
 			<?php endif; ?>
-						
+
 			</div>
 		<?php endif; ?>
 	<?php endforeach; ?>

@@ -48,5 +48,15 @@ JHtml::_('behavior.caption');
 	<div class="cat-children">
 		<?php echo $this->loadTemplate('children'); ?>
 	</div>
+
+	<?php
+	// added 2015-03-01 - Hack to show the seminar archive link in seminars section as well as resources
+	if($this->category->alias == 'seminars') { ?>
+		<h3 class="page-header item-title">
+			<a href="/resources/seminar-archive">Seminar Archive</a>
+		</h3>
+	<?php
+	}?>
+
 	<?php endif; ?>
 </div>
