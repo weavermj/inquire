@@ -127,14 +127,7 @@ $required	= false;
 
             <?php } ?>
         </li>
-        <li>
-            <?php
-            //display registration intro text
-            if ($conf->get('registration_text_concluding')) {
-                echo $conf->get('registration_text_concluding');
-            }
-            ?>
-        </li>
+
         <li>
             <div class="form-field">
                 <div id="cwin-wait" style="display:none;"></div>
@@ -144,6 +137,14 @@ $required	= false;
                     <a class="button radius" href="<?php echo JRoute::_('');?>" title="<?php echo JText::_('JCANCEL');?>"><?php echo JText::_('JCANCEL');?></a>
                 </div>
             </div>
+        </li>
+        <li>
+            <?php
+            //display registration intro text
+            if ($conf->get('registration_text_concluding')) {
+                echo $conf->get('registration_text_concluding');
+            }
+            ?>
         </li>
            </ul>
         <div>
