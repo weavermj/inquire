@@ -65,15 +65,26 @@ $required	= false;
             if ($conf->get('email_as_username') && $field->fieldcode == 'username') {continue;}
 
             if ($field->type != 'group') {
+                if ($field->fieldcode == 'name') {
+                    $skip_class = 'inq_hide';
+                } else {
+                    $skip_class = '';
+                };
             ?>
 
-                <li>
-                    <label id="lblfield<?php echo $field->id;?>" for="jform_<?php echo $field->fieldcode;?>" class="form-label"><?php if($field->required > 0) echo '*'; ?><?php echo JText::_($field->name); ?></label>
-                    <div class="form-field">
-                        <?php echo $field->html; ?>
-                    </div>
+                <div class="row <?php echo $skip_class; ?>">
+                    <li>
+                        <div class="small-12 medium-4 large-3 columns">
+                            <label id="lblfield<?php echo $field->id;?>" for="jform_<?php echo $field->fieldcode;?>" class="form-label"><?php if($field->required > 0) echo '*'; ?> <?php echo JText::_($field->name); ?></label>
+                        </div>
+                        <div class="small-12 medium-6 large-5 columns end">
+                            <div class="form-field">
+                                <?php echo $field->html; ?>
+                            </div>
+                        </div>
 
-                </li>
+                    </li>
+                </div>
                 <?php
             }
 
@@ -170,6 +181,7 @@ $required	= false;
         var first_name = '';
         var last_name = '';
 
+        joms.jQuery(".inq_hide").hide();
         joms.jQuery("#lblfield2").hide();
         joms.jQuery("#jform_name").remove();
         joms.jQuery('#uuForm').append('<input type="hidden" name="jform[name]" id="jform_name" value="Default Name"/>');
