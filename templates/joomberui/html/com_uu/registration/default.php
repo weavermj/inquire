@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
 
 JHtml::_('behavior.keepalive');
 JHtml::_('behavior.tooltip');
-//JHtml::_('behavior.formvalidation');
+// JHtml::_('behavior.formvalidation');
 JHtml::_('behavior.noframes');
 //@bug on modal http://joomlacode.org/gf/project/joomla/tracker/?action=TrackerItemEdit&tracker_item_id=27239
 //use iframe handler
@@ -132,7 +132,7 @@ $required	= false;
             <div class="form-field">
                 <div id="cwin-wait" style="display:none;"></div>
                 <div id="cwin-btn">
-                    <input class="button radius" type="submit" id="btnSubmit" value="<?php echo JText::_('JREGISTER'); ?>" name="submit">
+                    <input class="button radius validateSubmit" type="submit" id="btnSubmit" value="<?php echo JText::_('JREGISTER'); ?>" name="submit">
 
                     <a class="button radius" href="<?php echo JRoute::_('');?>" title="<?php echo JText::_('JCANCEL');?>"><?php echo JText::_('JCANCEL');?></a>
                 </div>
@@ -192,10 +192,8 @@ $required	= false;
         joms.jQuery("#jform_name").remove();
         joms.jQuery('#uuForm').append('<input type="hidden" name="jform[name]" id="jform_name" value="Default Name"/>');
 
-
         joms.jQuery('#jform_cf_firstname').blur(function(e) {
             first_name = e.currentTarget.value;
-            // joms.jQuery('#jform_name').val(first_name + ' ' + last_name);
             joms.jQuery('#jform_name').remove();
             joms.jQuery('#uuForm').append('<input type="hidden" name="jform[name]" id="jform_name" value="' + first_name + ' '  + last_name + '"/>');
         });
@@ -203,7 +201,6 @@ $required	= false;
             last_name = e.currentTarget.value;
             joms.jQuery('#jform_name').remove();
             joms.jQuery('#uuForm').append('<input type="hidden" name="jform[name]" id="jform_name" value="' + first_name + ' '  + last_name + '"/>');
-            // joms.jQuery('#jform_name').val(first_name + ' ' + last_name);
         });
 
     });
