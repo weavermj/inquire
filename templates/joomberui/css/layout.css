@@ -18,6 +18,10 @@
   padding: 0 15px;
 }
 
+.f-topbar-fixed {
+    padding-top: 45px !important;
+}
+
 /* ************************** */
 
 #top-slot {
