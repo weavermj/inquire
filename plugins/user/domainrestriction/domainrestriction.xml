@@ -28,27 +28,27 @@
         <fields name="params">
             <fieldset name="ipsecurity" addfieldpath="plugins/user/domainrestriction/fields">
                 <field type="spacer" label="PLG_USER_DOMAINRESTRICTION_IPSECURITY_SPACER" />
-                <field class="ipsecurity" type="aetextarea" name="whitelist" 
-                       translate_default="true" 
-                       default="PLG_USER_DOMAINRESTRICTION_DEFAULT_WHITELIST" 
-                       label="PLG_USER_DOMAINRESTRICTION_WHITELIST_LABEL" 
-                       description="PLG_USER_DOMAINRESTRICTION_WHITELIST_DESC" 
+                <field class="ipsecurity" type="aetextarea" name="whitelist"
+                       translate_default="true"
+                       default="PLG_USER_DOMAINRESTRICTION_DEFAULT_WHITELIST"
+                       label="PLG_USER_DOMAINRESTRICTION_WHITELIST_LABEL"
+                       description="PLG_USER_DOMAINRESTRICTION_WHITELIST_DESC"
                 />
-                <field class="ipsecurity" type="aetextarea" name="blacklist" 
-                       translate_default="true" 
-                       default="PLG_USER_DOMAINRESTRICTION_DEFAULT_BLACKLIST" 
-                       label="PLG_USER_DOMAINRESTRICTION_BLACKLIST_LABEL" 
-                       description="PLG_USER_DOMAINRESTRICTION_BLACKLIST_DESC" 
+                <field class="ipsecurity" type="aetextarea" name="blacklist"
+                       translate_default="true"
+                       default="PLG_USER_DOMAINRESTRICTION_DEFAULT_BLACKLIST"
+                       label="PLG_USER_DOMAINRESTRICTION_BLACKLIST_LABEL"
+                       description="PLG_USER_DOMAINRESTRICTION_BLACKLIST_DESC"
                 />
                 <field type="blacklist"/>
             </fieldset>
             <fieldset name="allowed">
-                <field name="tld" type="tlds" 
+                <field name="tld" type="tlds"
                        default="W10K"
                        description="PLG_USER_DOMAINRESTRICTION_TLDS_DESC"
                        label="PLG_USER_DOMAINRESTRICTION_TLDS_LABEL"
                 />
-                <field name="domain" type="domains" 
+                <field name="domain" type="domains"
                        default="W10K"
                        description="PLG_USER_DOMAINRESTRICTION_DOMAINS_DESC"
                        label="PLG_USER_DOMAINRESTRICTION_DOMAINS_LABEL"
@@ -69,15 +69,15 @@
                 <field name="bulk" type="textarea" class="bulk" default=""
                        description="PLG_USER_DOMAINRESTRICTION_BULK_DESC"
                        label="PLG_USER_DOMAINRESTRICTION_BULK_LABEL"
-                />                
+                />
             </fieldset>
             <fieldset name="disallowed" addfieldpath="plugins/user/domainrestriction/fields">
-                <field name="badtld" type="tlds" 
+                <field name="badtld" type="tlds"
                        default="W10K"
                        description="PLG_USER_DOMAINRESTRICTION_BADTLDS_DESC"
                        label="PLG_USER_DOMAINRESTRICTION_BADTLDS_LABEL"
                 />
-                <field name="baddomain" type="domains" 
+                <field name="baddomain" type="domains"
                        default="W10K"
                        description="PLG_USER_DOMAINRESTRICTION_BADDOMAINS_DESC"
                        label="PLG_USER_DOMAINRESTRICTION_BADDOMAINS_LABEL"
@@ -98,12 +98,12 @@
                 <field name="badbulk" type="textarea" class="bulk" default=""
                        description="PLG_USER_DOMAINRESTRICTION_BULK_DESC"
                        label="PLG_USER_DOMAINRESTRICTION_BULK_LABEL"
-                />         
+                />
             </fieldset>
             <fieldset name="advanced" addfieldpath="plugins/user/domainrestriction/fields">
-                <field type="radio" name="ignorechange" 
-                       label="PLG_USER_DOMAINRESTRICTION_IGNORECHANGE_LABEL" 
-                       description="PLG_USER_DOMAINRESTRICTION_IGNORECHANGE_DESC" 
+                <field type="radio" name="ignorechange"
+                       label="PLG_USER_DOMAINRESTRICTION_IGNORECHANGE_LABEL"
+                       description="PLG_USER_DOMAINRESTRICTION_IGNORECHANGE_DESC"
                        default="1" >
                     <option value="1">JYes</option>
                     <option value="0">JNo</option>
@@ -119,6 +119,20 @@
                 <field type="usergroup" name="excludegroup" multiple="true"
                        description="PLG_USER_DOMAINRESTRICTION_EXCLUDEGROUP_DESC"
                        label="PLG_USER_DOMAINRESTRICTION_EXCLUDEGROUP_LABEL" />
+            </fieldset>
+            <fieldset name="email" addfieldpath="plugins/user/domainrestriction/fields">
+                <field type="radio" name="sendemailonfailure"
+                       label="PLG_USER_DOMAINRESTRICTION_SENDEMAIL_LABEL"
+                       description="PLG_USER_DOMAINRESTRICTION_SENDEMAIL_DESC"
+                       default="1" >
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>
+                <field name="emailforfailures" type="text"
+                       default=""
+                       label="PLG_USER_DOMAINRESTRICTION_EMAIL_LABEL"
+                       description="PLG_USER_DOMAINRESTRICTION_EMAIL_DESC"
+                />
             </fieldset>
         </fields>
     </config>

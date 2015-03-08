@@ -39,10 +39,10 @@ class plgUserDomainRestriction extends JPlugin {
         if($isnew) {
             $listtest = $this->_blackwhite($this->_getIP());
             if($listtest === true) {
-                return true;            
+                return true;
             }
             if($listtest !== false) {
-                $this->app->enqueueMessage(JText::_('PLG_USER_DOMAINRESTRICTION_DENY'),'warning');                
+                $this->app->enqueueMessage(JText::_('PLG_USER_DOMAINRESTRICTION_DENY'),'warning');
                 return false;
             }
         } else {
@@ -64,11 +64,13 @@ class plgUserDomainRestriction extends JPlugin {
             $this->_allowed = $this->_decision(); // disallowed entries
 
         if (!$this->_allowed) {
+            $this->_emailFailedAttempt($new); // send an email with the tried details
             JFactory::getLanguage()->load('plg_user_domainrestriction', JPATH_ADMINISTRATOR);
             $message = $isnew?'PLG_USER_DOMAINRESTRICTION_DENY':'PLG_USER_DOMAINRESTRICTION_DENYCHANGE';
             $this->app->enqueueMessage(JText::_($message),'warning');
             $result = false;
         }
+
         return $result;
     }
 
@@ -96,6 +98,40 @@ class plgUserDomainRestriction extends JPlugin {
             )
         );
         return $ip;
+    }
+
+    private function _emailFailedAttempt($user) {
+        $shouldSendEmail = ($this->params->get('sendemailonfailure') == "1");
+        $emailRecipient = $this->params->get('emailforfailures');
+
+        if($shouldSendEmail && $emailRecipient != "") {
+            // we are not allowed here, so send a message to membership@inquire.org.uk
+            $mailer = JFactory::getMailer();
+            $config = JFactory::getConfig();
+            $sender = array(
+                'webmaster@inquire.org.uk',
+                'Inquire Website'
+            );
+
+            $mailer->setSender($sender);
+
+            $recipient = 'weavermjw@googlemail.com';
+            $mailer->addRecipient($recipient);
+
+            $body  = "A new user tried to register at www.inquire.org.uk, but their email address did not match the current whitelist.\n\n";
+            $body .= "The user's details were as follows:\n\n";
+            $body .= "Full Name: " . $user['name'] . "\n";
+            $body .= "First Name: " . $user['cf_firstname'] . "\n";
+            $body .= "Last Name: " . $user['cf_lastname'] . "\n";
+            $body .= "Email address: " . $user['email'] . "\n";
+            $body .= "Member Type: " . $user['cf_member_type'] . "\n";
+            $body .= "Date: " . $user['registerDate'] . "\n\n";
+            $body .= "Please consider this user's request to join the website.";
+
+            $mailer->setSubject('Inquire Membership - User not on whitelist');
+            $mailer->setBody($body);
+            $send = $mailer->Send();
+        }
     }
 
     private function _blackwhite($ip) {
@@ -142,7 +178,7 @@ class plgUserDomainRestriction extends JPlugin {
         }
         return false;
     }
-    
+
     private function _bwnet($net) {
         return $this->_gmp ? (new IPv6Net($net)) : SimpleCIDR::getInstance($net);
     }
@@ -193,7 +229,7 @@ class plgUserDomainRestriction extends JPlugin {
             return true;
 
         $user = $this->_getUser($user['username']);
-        
+
         $excludegroups = $this->params->get('excludegroup', array());
         foreach ($user->groups as $group)
             if (in_array($group, (array) $excludegroups))
@@ -228,7 +264,7 @@ class plgUserDomainRestriction extends JPlugin {
         }
         return true;
     }
-    
+
     function _getUser($username) {
         $db = JFactory::getDbo();
         $query = $db->getQuery(true);
@@ -272,5 +308,5 @@ class plgUserDomainRestriction extends JPlugin {
         $tld = strstr($tail, ".");
         return preg_replace('/^\./', '', $tld);
     }
-    
+
 }
