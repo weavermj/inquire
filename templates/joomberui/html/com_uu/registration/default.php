@@ -123,9 +123,9 @@ $required	= false;
             <div class="form-field">
                 <div id="cwin-wait" style="display:none;"></div>
                 <div id="cwin-btn">
-                    <input class="cButton cButton-Blue validateSubmit" type="submit" id="btnSubmit" value="<?php echo JText::_('JREGISTER'); ?>" name="submit">
-                    <?php echo JText::_('COM_UU_OR');?>
-                    <a href="<?php echo JRoute::_('');?>" title="<?php echo JText::_('JCANCEL');?>"><?php echo JText::_('JCANCEL');?></a>
+                    <input class="button radius" type="submit" id="btnSubmit" value="<?php echo JText::_('JREGISTER'); ?>" name="submit">
+
+                    <a class="button radius" href="<?php echo JRoute::_('');?>" title="<?php echo JText::_('JCANCEL');?>"><?php echo JText::_('JCANCEL');?></a>
                 </div>
             </div>
         </li>
@@ -171,7 +171,8 @@ $required	= false;
         var last_name = '';
 
         joms.jQuery("#lblfield2").hide();
-        joms.jQuery("#jform_name").prop('disabled', true).hide();
+        joms.jQuery("#jform_name").remove();
+        joms.jQuery('#uuForm').append('<input type="hidden" name="jform[name]" id="jform_name" value="Default Name"/>');
 
 
         joms.jQuery('#jform_cf_firstname').blur(function(e) {
