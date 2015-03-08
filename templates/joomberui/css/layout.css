@@ -238,3 +238,16 @@ ul.category li {
 }
 
 /* ***************** */
+
+/* UU Ultimate User Specific Overrides */
+
+#uu-wrap input {
+    border-radius: 0px !important;
+
+}
+
+#uu-wrap input[type="text"],
+#uu-wrap select  {
+    height: 2.3125rem !important;
+}
+/* ***************** */
