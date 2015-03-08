@@ -29,9 +29,14 @@ $required	= false;
     <?php endif; ?>
 
     <?php
+
+    // check for messages so we can hide intro text
+    $jAp = JFactory::getApplication();
+    $messages = $jAp->getMessageQueue();
+
     //display registration intro text
     $registration_text_intro = $conf->get('registation_text_intro');
-    if (!empty($registration_text_intro)) {
+    if (!empty($registration_text_intro) && (count($messages) == 0)) {
        echo $registration_text_intro;
     }
     ?>

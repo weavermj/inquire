@@ -135,7 +135,7 @@ class UuControllerRegistration extends UuController
             $app->setUserState('com_uu.registration.data', $data);
 
             // Redirect back to the edit screen.
-            $this->setMessage(JText::sprintf('COM_UU_REGISTRATION_SAVE_FAILED', $model->getError()), 'warning');
+            $this->setMessage($model->getError(), 'There was a problem');
             $this->setRedirect(JRoute::_('index.php?option=com_uu&view=registration', false));
             return false;
         }
