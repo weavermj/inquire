@@ -245,11 +245,31 @@ ul.category li {
 
 }*/
 
+#uu-wrap {
+    min-width: 0 !important;
+    min-height: 0 !important;
+}
+
+#uu-wrap .row {
+    margin-bottom: 12px;
+}
+
+#uu-wrap .form-label {
+    margin-bottom: 5px !important;
+    text-align: left !important;
+    width: auto !important;
+}
+
+#uu-wrap .form-field {
+    margin: 0 !important;
+}
+
 #uu-wrap input[type="text"],
 #uu-wrap input[type="password"],
 #uu-wrap select  {
     border-radius: 0px !important;
     height: 2.3125rem !important;
+    width: 100% !important;
 }
 
 #uu-wrap .button {
@@ -261,13 +281,16 @@ ul.category li {
     color: #555;
     display: block;
     margin-top: -8px;
-    margin-bottom: 20px;
+    font-size: 0.86rem;
 }
 
 .jsPasswordStrength {
     border-radius: 4px;
     padding: 8px !important;
     font-size: 0.8rem;
+    position: absolute;
+    top: 12px;
+    right: 5px;
 }
 
 .jsPasswordStrength_1 {
