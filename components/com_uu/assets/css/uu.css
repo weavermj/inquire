@@ -117,7 +117,8 @@ input[type=checkbox].invalid {
 
 
 #uu-wrap label, #uu-wrap input[type="text"], #uu-wrap input[type="password"], #uu-wrap .uneditable-input, #uu-wrap select, #uu-wrap textarea {
-    background: none repeat scroll 0 0 #FFFFFF;
+    /*background: none repeat scroll 0 0 #FFFFFF;*/
+    background-color: #ffffff;
     border: 1px solid #CCCCCC;
     border-radius: 2px 2px 2px 2px;
     color: #666666;
@@ -210,4 +211,3 @@ input[type=checkbox].invalid {
     border-color: red;
     border-color: red !important;
 }
-
