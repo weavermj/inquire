@@ -166,6 +166,27 @@ $required	= false;
         //TODO add this field only if required
         joms.jQuery('#uuForm').append('<input type="hidden" name="usernamepass" id="usernamepass" value="N"/>');
         joms.jQuery('#uuForm').append('<input type="hidden" name="emailpass" id="emailpass" value="N"/>');
+
+        var first_name = '';
+        var last_name = '';
+
+        joms.jQuery("#lblfield2").hide();
+        joms.jQuery("#jform_name").prop('disabled', true).hide();
+
+
+        joms.jQuery('#jform_cf_firstname').blur(function(e) {
+            first_name = e.currentTarget.value;
+            // joms.jQuery('#jform_name').val(first_name + ' ' + last_name);
+            joms.jQuery('#jform_name').remove();
+            joms.jQuery('#uuForm').append('<input type="hidden" name="jform[name]" id="jform_name" value="' + first_name + ' '  + last_name + '"/>');
+        });
+        joms.jQuery('#jform_cf_lastname').blur(function(e) {
+            last_name = e.currentTarget.value;
+            joms.jQuery('#jform_name').remove();
+            joms.jQuery('#uuForm').append('<input type="hidden" name="jform[name]" id="jform_name" value="' + first_name + ' '  + last_name + '"/>');
+            // joms.jQuery('#jform_name').val(first_name + ' ' + last_name);
+        });
+
     });
 
 </script>
