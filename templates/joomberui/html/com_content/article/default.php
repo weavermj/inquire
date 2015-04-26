@@ -18,7 +18,6 @@ $urls    = json_decode($this->item->urls);
 $canEdit = $this->item->params->get('access-edit');
 $user    = JFactory::getUser();
 $info = $this->item->params->get('info_block_position', 0);
-
 ?>
 
 <?php if ($this->params->get('show_page_heading', 1)) : ?>
@@ -121,11 +120,10 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 				<?php endif; ?>
 			<?php endif; ?>
 		</ul>
-          <?php if ($params->get('show_tags', 1) && !empty($this->item->tags)) : ?>
-		<?php $this->item->tagLayout = new JLayoutFile('joomla.content.tags'); ?>
-
-		<?php echo $this->item->tagLayout->render($this->item->tags->itemTags); ?>
-	<?php endif; ?>
+        <?php if ($params->get('show_tags', 1) && !empty($this->item->tags)) : ?>
+			<?php $this->item->tagLayout = new JLayoutFile('joomla.content.tags'); ?>
+			<?php echo $this->item->tagLayout->render($this->item->tags->itemTags); ?>
+		<?php endif; ?>
 	</footer>
 	<?php endif; ?>
 	<?php  if (!$params->get('show_intro')) : echo $this->item->event->afterDisplayTitle; endif; ?>
@@ -223,24 +221,28 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 	<?php if ($params->get('show_readmore') && $this->item->fulltext != null) :
 		$link1 = JRoute::_('index.php?option=com_users&view=login');
 		$link = new JURI($link1);?>
-	<a class="button small radius info" href="<?php echo $link; ?>">
-		<?php $attribs = json_decode($this->item->attribs);  ?>
-		<?php
-		if ($attribs->alternative_readmore == null) :
-			echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
-		elseif ($readmore = $this->item->alternative_readmore) :
-			echo $readmore;
-			if ($params->get('show_readmore_title', 0) != 0) :
+		<a class="button small radius info" href="<?php echo $link; ?>">
+			<?php $attribs = json_decode($this->item->attribs);  ?>
+			<?php
+			if ($attribs->alternative_readmore == null) :
+				echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
+			elseif ($readmore = $this->item->alternative_readmore) :
+				echo $readmore;
+				if ($params->get('show_readmore_title', 0) != 0) :
+					echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
+				endif;
+			elseif ($params->get('show_readmore_title', 0) == 0) :
+				echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');
+			else :
+				echo JText::_('COM_CONTENT_READ_MORE');
 				echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
-			endif;
-		elseif ($params->get('show_readmore_title', 0) == 0) :
-			echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');
-		else :
-			echo JText::_('COM_CONTENT_READ_MORE');
-			echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
-		endif; ?>
+			endif; ?>
 		</a>
 	<?php endif; ?>
+	<?php endif; ?>
+	<?php if ($user->id && !$params->get('access-view')):?>
+		<?php echo $this->item->introtext; ?>
+		<p>You do not have permission to view this content.</p>
 	<?php endif; ?>
 </article>
 	<?php
