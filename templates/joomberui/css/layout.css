@@ -67,6 +67,11 @@ a:hover {
     border-bottom: 1px solid #d61f26;
 }
 
+fieldset {
+    border-radius: 3px;
+    background: #f1f1f1;
+}
+
 .active_menu {
     border-bottom: 4px solid #d61f26;
 }
@@ -258,7 +263,8 @@ ul.category li {
 }
 
 ul.category h3,
-div.cat-children h3 {
+div.cat-children h3,
+.inq-links h3 {
     background: #f1f1f1;
     border-radius: 3px;
     padding: 16px;

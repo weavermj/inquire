@@ -42,6 +42,7 @@ $required	= false;
     ?>
 
     <form id="uuForm" name="uuForm" action="<?php echo JRoute::_('index.php?option=com_uu&task=registration.register'); ?>" method="post" class="uu-form-validate">
+
         <?php
             foreach ($this->registrationFields as $key => $field):?>
             <?php
@@ -53,7 +54,7 @@ $required	= false;
                 ?>
                 <div class="ctitle">
                     <h2><?php echo JText::_( $field->name ); ?></h2>
-                </div>
+                </div><fieldset>
                 <?php
             }
             //not first element and it's a group
@@ -96,6 +97,7 @@ $required	= false;
             ?>
 
         <?php endforeach;?>
+        </fieldset>
         </ul>
         <ul class="cFormList cFormHorizontal cResetList">
         <?php
@@ -152,6 +154,7 @@ $required	= false;
             <input type="hidden" name="task" value="registration.register" />
             <?php echo JHtml::_('form.token');?>
         </div>
+
     </form>
 </div>
 
