@@ -62,6 +62,81 @@
  * NOTE: If you override pagination_item_active OR pagination_item_inactive you MUST override them both
  */
 
+ function pagination_list_footer($list)
+ {
+ 	$html = "<div class=\"pagination\">\n";
+ 	$html .= $list['pageslinks'];
+ 	$html .= "\n<input type=\"hidden\" name=\"" . $list['prefix'] . "limitstart\" value=\"" . $list['limitstart'] . "\" />";
+ 	$html .= "\n</div>";
+
+ 	return $html;
+ }
+
+ function pagination_list_render($list)
+ {
+ 	// Calculate to display range of pages
+ 	$currentPage = 1;
+ 	$range = 1;
+ 	$step = 5;
+
+    $isFirstPageActive = true;
+    $isLastPageActive = false;
+
+ 	foreach ($list['pages'] as $k => $page)
+ 	{
+ 		if (!$page['active'])
+ 		{
+            if ($currentPage != $k) {
+                $isFirstPageActive = false;
+            }
+ 			$currentPage = $k;
+ 		}
+ 	}
+
+    if ($currentPage == (sizeof($list['pages']))) {
+        $isLastPageActive = true;
+    }
+ 	if ($currentPage >= $step)
+ 	{
+ 		if ($currentPage % $step == 0)
+ 		{
+ 			$range = ceil($currentPage / $step) + 1;
+ 		}
+ 		else
+ 		{
+ 			$range = ceil($currentPage / $step);
+ 		}
+ 	}
+
+ 	$html = '<div class="pagination-list">';
+     if(!$isFirstPageActive) {
+         $html .= $list['start']['data'];
+         $html .= $list['previous']['data'];
+     }
+
+ 	foreach ($list['pages'] as $k => $page)
+ 	{
+ 		if (in_array($k, range($range * $step - ($step + 1), $range * $step)))
+ 		{
+ 			if (($k % $step == 0 || $k == $range * $step - ($step + 1)) && $k != $currentPage && $k != $range * $step - $step)
+ 			{
+ 				$page['data'] = preg_replace('#(<a.*?>).*?(</a>)#', '$1...$2', $page['data']);
+ 			}
+ 		}
+
+ 		$html .= $page['data'];
+ 	}
+
+     if(!$isLastPageActive) {
+     	 $html .= $list['next']['data'];
+         $html .= $list['end']['data'];
+     }
+
+ 	$html .= '</div>';
+ 	return $html;
+ }
+
+
 
 function pagination_item_active(&$item)
 {
@@ -82,21 +157,12 @@ function pagination_item_active(&$item)
   }
   else
   {
-    return '<a href="' . $item->link . '" class="pagenav">' . $item->text . '</a>';
+    return '<a href="' . $item->link . '">' . $item->text . '</a>';
   }
 }
 
 
 function pagination_item_inactive(&$item)
 {
-  $app = JFactory::getApplication();
-
-  if ($app->isAdmin())
-  {
-    return '<span>' . $item->text . '</span>';
-  }
-  else
-  {
-    return '<span class="pagenav">' . $item->text . '</span>';
-  }
+  return '<span>' . $item->text . '</span>';
 }

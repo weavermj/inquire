@@ -403,3 +403,53 @@ ul.category li {
 
 }
 /* ****** */
+
+/* Search Results */
+
+.search-results {
+    margin-bottom: 0;
+}
+
+.inq-result {
+    padding: 8px 16px 8px 16px;
+    margin: 16px 0;
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.result-created {
+    font-size: 12px;
+    color: #454545;
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+
+
+.pagination-list a {
+    display: inline-block;
+    background: #d61f26;
+    color: #fff;
+    border-radius: 3px;
+    padding: 6px 6px;
+    margin-right: 3px;
+    min-width: 32px;
+    text-align: center;
+}
+
+.pagination-list span {
+    display: inline-block;
+    background: #2D3192;
+    color: #fff;
+    border-radius: 3px;
+    padding: 6px 6px;
+    margin-right: 3px;
+    min-width: 32px;
+    text-align: center;
+}
+
+.pagination-list a:hover {
+    border: none;
+}
+
+
+/* ****** */

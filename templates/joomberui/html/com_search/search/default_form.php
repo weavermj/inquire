@@ -28,55 +28,57 @@ $upper_limit = $lang->getUpperLimitSearchWord();
 			<div class="small-11 medium-5 columns">
 				<input class="inputbox search-query" type="text" name="searchword" placeholder="<?php echo JText::_('COM_SEARCH_SEARCH_KEYWORD'); ?>" id="search-searchword" size="30" maxlength="<?php echo $upper_limit; ?>" value="<?php echo $this->escape($this->origkeyword); ?>" class="inputbox" />
 			</div>
-			<div class="small-1 column">
+			<div class="small-1 column end">
 				<button class="button tiny postfix radius" name="Search" onclick="this.form.submit()" class="btn hasTooltip" title="<?php echo JHtml::tooltipText('COM_SEARCH_SEARCH');?>"><span class="icon-search">Go</span></button>
 			</div>
-		<div>
+		</div>
 
 		<input type="hidden" name="task" value="search" />
-		<div class="clearfix"></div>
 	</div>
 
 
 
-	<fieldset class="phrases">
-		<legend><?php echo JText::_('COM_SEARCH_FOR');?></legend>
-			<div class="phrases-box">
-			<?php echo $this->lists['searchphrase']; ?>
-			</div>
-			<div class="ordering-box">
-				<label for="ordering" class="ordering">
-					<?php echo JText::_('COM_SEARCH_ORDERING');?>
-				</label>
-				<?php echo $this->lists['ordering'];?>
-			</div>
-	</fieldset>
-
 	<?php if ($this->params->get('search_areas', 1)) : ?>
 		<fieldset class="only">
-		<legend><?php echo JText::_('COM_SEARCH_SEARCH_ONLY');?></legend>
-		<?php foreach ($this->searchareas['search'] as $val => $txt) :
-			$checked = is_array($this->searchareas['active']) && in_array($val, $this->searchareas['active']) ? 'checked="checked"' : '';
-		?>
-		<label for="area-<?php echo $val;?>" class="checkbox">
-			<input type="checkbox" name="areas[]" value="<?php echo $val;?>" id="area-<?php echo $val;?>" <?php echo $checked;?> >
-			<?php echo JText::_($txt); ?>
-		</label>
-		<?php endforeach; ?>
+			<legend><?php echo JText::_('COM_SEARCH_SEARCH_ONLY');?></legend>
+			<?php foreach ($this->searchareas['search'] as $val => $txt) :
+				$checked = is_array($this->searchareas['active']) && in_array($val, $this->searchareas['active']) ? 'checked="checked"' : '';
+			?>
+			<label for="area-<?php echo $val;?>" class="checkbox">
+				<input type="checkbox" name="areas[]" value="<?php echo $val;?>" id="area-<?php echo $val;?>" <?php echo $checked;?> >
+				<?php echo JText::_($txt); ?>
+			</label>
+			<?php endforeach; ?>
 		</fieldset>
 	<?php endif; ?>
 
 <?php if ($this->total > 0) : ?>
 
-	<div class="form-limit">
-		<label for="limit">
-			<?php echo JText::_('JGLOBAL_DISPLAY_NUM'); ?>
-		</label>
-		<?php echo $this->pagination->getLimitBox(); ?>
-	</div>
-<p class="counter">
-		<?php echo $this->pagination->getPagesCounter(); ?>
-	</p>
+	<?php if ($this->total > 1) : ?>
+		<div class="row">
+			<div class="small-5 medium-2 large-2 columns">
+				<label for="ordering" class="ordering">
+					<?php echo JText::_('COM_SEARCH_ORDERING');?>
+				</label>
+			</div>
+			<div class="small-7 medium-3 large-2 columns end">
+				<?php echo $this->lists['ordering'];?>
+			</div>
+		</div>
+	<?php endif; ?>
+
+	<?php if ($this->total > 5) : ?>
+		<div class="row">
+			<div class="small-5 medium-2 large-2 columns">
+				<label for="limit">
+					<?php echo JText::_('JGLOBAL_DISPLAY_NUM'); ?>
+				</label>
+			</div>
+			<div class="small-7 medium-3 large-2 columns end">
+				<?php echo $this->pagination->getLimitBox(); ?>
+			</div>
+		</div>
+	<?php endif; ?>
 
 <?php endif; ?>
 
