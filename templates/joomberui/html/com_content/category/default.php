@@ -45,18 +45,20 @@ JHtml::_('behavior.caption');
 	</div>
 
 	<?php if (!empty($this->children[$this->category->id])&& $this->maxLevel != 0) : ?>
-	<div class="cat-children">
-		<?php echo $this->loadTemplate('children'); ?>
-	</div>
+		<div class="cat-children">
+			<?php echo $this->loadTemplate('children'); ?>
+		</div>
 
-	<?php
-	// added 2015-03-01 - Hack to show the seminar archive link in seminars section as well as resources
-	if($this->category->alias == 'seminars') { ?>
-		<h3 class="page-header item-title">
-			<a href="/resources/seminar-archive">Seminar Archive</a>
-		</h3>
-	<?php
-	}?>
+		<?php
+		// added 2015-03-01 - Hack to show the seminar archive link in seminars section as well as resources
+		if($this->category->alias == 'seminars') { ?>
+			<div class="cat-children">
+				<h3 class="page-header item-title">
+					<a href="/resources/seminar-archive">Seminar Archive</a>
+				</h3>
+			</div>
+		<?php
+		}?>
 
 	<?php endif; ?>
 </div>

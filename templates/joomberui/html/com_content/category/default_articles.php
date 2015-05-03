@@ -90,7 +90,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 					<?php if ($this->items[$i]->state == 0): ?>
 						<span class="label label-warning">Unpublished</span>
 					<?php endif; ?>
-					
+
 
 						<?php if ($this->params->get('list_show_author', 1)) : ?>
 						<div class="list-author">

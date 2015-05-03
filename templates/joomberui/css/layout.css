@@ -192,7 +192,7 @@ div.icons {
     vertical-align: top;
 }
 
-.person img {
+.article .person img {
     border-radius: 50%;
     border: 8px solid #d61f26;
 }
@@ -255,6 +255,21 @@ ul.category {
 
 ul.category li {
 
+}
+
+ul.category h3,
+div.cat-children h3 {
+    background: #f1f1f1;
+    border-radius: 3px;
+    padding: 16px;
+}
+
+/* ***************** */
+
+/* Article */
+
+.article img {
+    border-radius: 10px;
 }
 
 /* ***************** */

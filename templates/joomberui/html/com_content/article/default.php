@@ -31,7 +31,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 	echo $this->item->pagination;
 }
 ?>
-<article>
+<article class="article">
 	<?php if (!$this->print) : ?>
 		<?php if ($canEdit ||  $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
 			<ul class="actions">
