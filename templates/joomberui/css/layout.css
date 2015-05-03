@@ -36,13 +36,25 @@
     margin: 16px auto;
 }
 
-h1, h2, h3, h4, h5 {
+
+h1, h2, h4, h5 {
     border-bottom: 1px solid #d4d4d4;
-    font-family: 'bebas', arial, sans-serif;
+    font-family: 'texgyrebonum', arial, sans-serif;
+    color: #000000;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2em;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 1.6em;
+    letter-spacing: -1px;
+}
+
+h3 {
+    font-size: 1em;
 }
 
 .top-bar a:hover,
