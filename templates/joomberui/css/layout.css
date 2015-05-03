@@ -331,3 +331,63 @@ ul.category li {
 
 
 /* ***************** */
+
+/* Footer */
+
+.inq-footer {
+    margin-top: 32px;
+    background: #2D3192;
+    text-align: center;
+}
+
+.inq-footer ul.nav.menu li.parent {
+    display: inline-block;
+    margin-right: 40px;
+    margin-top: 24px;
+    vertical-align: top;
+    text-align: left;
+    font-weight: bold;
+}
+
+.inq-footer ul.nav.menu li.alias-parent-active > a {
+    border-bottom: 2px solid #d61f26;
+}
+
+.inq-footer ul.nav.menu li.active > a {
+    border-bottom: 1px solid #d61f26;
+}
+
+.inq-footer ul.nav.menu li.parent ul {
+    margin-top: 16px;
+    list-style-type: none;
+    margin-left: 0;
+    font-weight: normal;
+}
+
+.inq-footer ul.nav.menu li.active.parent a,
+.inq-footer ul.nav.menu li.alias-parent-active.parent a {
+    color: #fff;
+    font-size: 13px;
+}
+
+.inq-footer ul.nav.menu li.parent a {
+    color: #ccc;
+    font-size: 13px;
+}
+
+.inq-divide {
+    border: solid #4D70B8;
+    border-width: 1px 0 0;
+}
+
+.inq-copyright {
+    font-size: 13px;
+    color: #fff;
+    height: 100px;
+}
+
+.inq-copyright a {
+    color: #fff;
+
+}
+/* ****** */

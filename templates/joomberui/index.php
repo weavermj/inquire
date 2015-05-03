@@ -171,19 +171,20 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
       </div>
     <?php endif; ?>
 
-    <?php if ($this->countModules( 'footer' )) : ?>
-      <div class="footer-row">
-        <div class="wrapper">
-          <footer class="row">
-              <!--footerrow-->
-              <jdoc:include type="modules" name="footer" style="joomberui" />
-          </footer>
-        </div>
-      </div>
-    <?php endif; ?>
 
-<!-- Credit Row Taken from https://github.com/nternetinspired/OneWeb -->
-  <footer class="row">
+	<?php if ($this->countModules( 'footer' )) : ?>
+		<footer class="inq-footer">
+			<div class="row">
+				<jdoc:include type="modules" name="footer" style="joomberui" />
+			</div>
+			<hr class="inq-divide">
+			<div class="row inq-copyright">
+				&copy; <?php echo date("Y"); ?> Inquire UK | <a href="mailto:admin@inquire.org.uk">admin@inquire.org.uk</a>
+			</div>
+		</footer>
+	<?php endif; ?>
+
+	<!-- Credit Row Taken from https://github.com/nternetinspired/OneWeb -->
     <?php if ($social > 0) : ?>
       <ul class="social">
         <?php if ($twitterLink != "") : ?>
@@ -203,12 +204,12 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
         <?php endif; ?>
       </ul>
     <?php endif; ?>
-      <ul class="right">
-        <div class="copyright">
+      <!-- <ul class="right"> -->
+        <!-- <div class="copyright"> -->
           <!--<small>&copy; <?php #echo date("Y"); ?> <?php #echo htmlspecialchars($app->getCfg('sitename'));?></small>-->
-        </div>
-      </ul>
-  </footer>
+        <!-- </div> -->
+      <!-- </ul> -->
+
   <!-- end of credit row -->
 
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/vendor/jquery-2.1.0.min.js"></script>
@@ -240,3 +241,4 @@ s.parentNode.insertBefore(g,s)}(document,"script"));
 
 </body>
 </html>
+
