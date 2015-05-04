@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="package" version="2.5.0" method="upgrade">
+  <name>Dropfiles Theme Pack One</name>
+  <creationDate>26-Jun-2013</creationDate>
+  <author>JoomUnited</author>
+  <authorEmail>contact@joomunited.com</authorEmail>
+  <authorUrl>http://www.joomunited.com</authorUrl>
+  <packagename>dropfilesthemespack1</packagename>
+  <copyright />
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>2.0.7</version>
+  <description>Dropfiles Theme Pack One</description>
+  <scriptfile>install.php</scriptfile>
+  <dropfilesversion>2.0.4</dropfilesversion>
+  <files folder="packages">
+    <folder type="dropfiles-ggd" id="dropfilesthemespack1" group="dropfiles">dropfiles-ggd</folder>
+    <folder type="dropfiles-tree" id="dropfilesthemespack1" group="dropfiles">dropfiles-tree</folder>
+    <folder type="dropfiles-table" id="dropfilesthemespack1" group="dropfiles">dropfiles-table</folder>
+  </files>
+  <extensions>    
+    <extension name="ggd" type="plugin" folder="dropfilesthemes" enable="true"/>
+    <extension name="tree" type="plugin" folder="dropfilesthemes" enable="true"/>
+    <extension name="table" type="plugin" folder="dropfilesthemes" enable="true"/>
+  </extensions>
+</extension>

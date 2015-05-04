@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5" method="upgrade">
+	<name>Ultimate User Package</name>
+	<author>Stéphane Bouey</author>
+	<creationDate>February 2013</creationDate>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+ 	<packagename>Ultimate User</packagename>
+	 <version>1.4.1</version>
+	 <url>http://www.faboba.com</url>
+	 <packager>Stéphane Bouey</packager>
+	 <packagerurl>http://www.faboba.com</packagerurl>
+	 <description>Ultimate User Installer Package.</description>
+	 <files folder="packages">
+		 <file type="component" id="com_uu" >com_uu_1.4.1.zip</file>
+		 <file type="plugin" id="uuredirect" group="system">plg_uuredirect_1.0.2.zip</file>
+		 <file type="plugin" id="ultimateuser" group="user">plg_ultimateuser_1.0.2.zip</file>
+	 </files>
+    <updateservers>
+        <server name="Ultimate USer Update Site" type="collection" priority="1" >http://update.faboba.com/ultimateuser/collection.xml</server>
+    </updateservers>
+	 
+</extension>
