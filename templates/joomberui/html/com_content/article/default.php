@@ -224,8 +224,10 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 		<div class="panel">
 			<div class="row">
 				<div class="small-12 medium-8 large-5 columns">
-					<p><?php echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE'); ?></p>
+					<p class="dialog"><?php echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE'); ?></p>
 				</div>
+
+				<div class="spacer show-for-small-only">&nbsp;</div>
 
 				<div class="small-12 medium-4 large-7 columns">
 					<a class="button small radius info" href="<?php echo $link; ?>">
