@@ -72,6 +72,11 @@ fieldset {
     background: #f1f1f1;
 }
 
+.panel .button,
+.panel p {
+    margin-bottom: 0;
+}
+
 .active_menu {
     border-bottom: 4px solid #d61f26;
 }
