@@ -421,7 +421,10 @@ div.cat-children h3,
 
 .inq-copyright a {
     color: #fff;
+}
 
+.inq-copyright .row {
+    margin-bottom: 20px;
 }
 /* ****** */
 

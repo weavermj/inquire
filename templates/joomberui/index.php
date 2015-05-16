@@ -178,8 +178,13 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
 				<jdoc:include type="modules" name="footer" style="joomberui" />
 			</div>
 			<hr class="inq-divide">
-			<div class="row inq-copyright">
-				&copy; <?php echo date("Y"); ?> Inquire UK | <a href="mailto:admin@inquire.org.uk">admin@inquire.org.uk</a>
+			<div class="inq-copyright">
+				<div class="row">
+					&copy; <?php echo date("Y"); ?> Inquire UK | <a href="mailto:admin@inquire.org.uk">admin@inquire.org.uk</a>
+				</div>
+				<div class="row ">
+					<a href="/22-website-terms-and-conditions">Website Terms and Conditions</a>
+				</div>
 			</div>
 		</footer>
 	<?php endif; ?>
@@ -241,4 +246,3 @@ s.parentNode.insertBefore(g,s)}(document,"script"));
 
 </body>
 </html>
-
