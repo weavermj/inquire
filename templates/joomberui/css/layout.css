@@ -267,6 +267,7 @@ div.cat-children h3,
 .inq-links h3 {
     background: #f1f1f1;
     border-radius: 3px;
+    border: 1px solid #dddddd;
     padding: 16px;
 }
 
