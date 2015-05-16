@@ -378,6 +378,27 @@ div.cat-children h3,
     font-size: 0.8rem !important;
 }
 
+/* ***************** */
+
+/* Dropfiles */
+
+.dropfiles-content .downloadlink,
+.dropfiles-content .openlink {
+    border-radius: 3px;
+    border-width: 0px;
+    background-color: #d61f26;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    -webkit-transition: background-color 300ms ease-out;
+    -moz-transition: background-color 300ms ease-out;
+    transition: background-color 300ms ease-out;
+    color: #ffffff;
+}
+
+.dropfiles-content .downloadlink:hover,
+.dropfiles-content .openlink:hover {
+    background: #ab191e;
+}
 
 /* ***************** */
 
