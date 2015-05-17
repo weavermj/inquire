@@ -417,6 +417,22 @@ div.cat-children h3,
     background: #ab191e;
 }
 
+@media only screen and (max-width: 40.063em) {
+
+    .dropfiles-content .ext {
+        display: none;
+    }
+
+    .dropfiles-content.dropfiles-content-default .filecontent {
+        margin-left: 0;
+    }
+
+    .dropfiles-content .openlink {
+        display: none;
+    }
+
+}
+
 /* ***************** */
 
 /* Footer */
@@ -493,6 +509,7 @@ div.cat-children h3,
     margin: 16px 0;
     background: #f1f1f1;
     border-radius: 3px;
+    border: 1px solid #dddddd;
 }
 
 .result-created {
