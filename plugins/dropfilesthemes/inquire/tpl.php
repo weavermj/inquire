@@ -165,5 +165,11 @@ DropfilesFilesHelper::includeJSHelper();
             </div>
         <?php endforeach; ?>
     <?php endif; ?>
+    <?php if(dropfilesBase::loadValue($this->params,'inquire_video',"") != ""): ?>
+        <div class="video-wrapper vimeo">
+            <?php echo dropfilesBase::loadValue($this->params,'inquire_video',""); ?>
+        </div>
+    <?php endif; ?>
+
 </div>
 <?php endif; ?>

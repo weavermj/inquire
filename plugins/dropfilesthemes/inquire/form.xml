@@ -3,6 +3,15 @@
     	<fields name="params">
 		<fieldset name="params" mainpart="true" addrulepath="/administrator/components/com_dropfiles/models/rules">
 
+            <field  name="inquire_video"
+                    type="text"
+                    stype="author5"
+                    default=""
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_VIDEO"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_VIDEO_DESC"
+                    message="COM_DROPFILES_THEME_INQUIRE_PARAM_VIDEO_MSG"
+            />
+
             <field  name="inquire_author1"
                     type="text"
                     stype="author1"
