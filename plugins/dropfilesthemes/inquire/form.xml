@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    	<fields name="params">
+		<fieldset name="params" mainpart="true" addrulepath="/administrator/components/com_dropfiles/models/rules">
+
+            <field  name="inquire_author1"
+                    type="text"
+                    stype="author1"
+                    default=""
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_1"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_1_DESC"
+                    message="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_1_MSG"
+            />
+
+            <field  name="inquire_author1_company"
+                    type="text"
+                    stype="author1_company"
+                    default=""
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_1_COMPANY"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_1_COMPANY_DESC"
+                    message="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_1_COMPANY_MSG"
+            />
+
+            <field  name="inquire_author1_primary"
+                    type="list"
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_1_PRIMARY"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_1_PRIMARY_DESC"
+                    default="0"
+                    class="inline">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field  name="inquire_author1_gender"
+                    type="list"
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_1_GENDER"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_1_GENDER_DESC"
+                    default="1"
+                    class="inline">
+                <option value="1">COM_DROPFILES_THEME_INQUIRE_GENDER_MALE</option>
+                <option value="0">COM_DROPFILES_THEME_INQUIRE_GENDER_FEMALE</option>
+            </field>
+
+            <field  name="inquire_author2"
+                    type="text"
+                    stype="author2"
+                    default=""
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_2"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_2_DESC"
+                    message="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_2_MSG"
+            />
+
+            <field  name="inquire_author2_company"
+                    type="text"
+                    stype="author2_company"
+                    default=""
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_2_COMPANY"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_2_COMPANY_DESC"
+                    message="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_2_COMPANY_MSG"
+            />
+
+            <field  name="inquire_author2_primary"
+                    type="list"
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_2_PRIMARY"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_2_PRIMARY_DESC"
+                    default="0"
+                    class="inline">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field  name="inquire_author2_gender"
+                    type="list"
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_2_GENDER"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_2_GENDER_DESC"
+                    default="1"
+                    class="inline">
+                <option value="1">COM_DROPFILES_THEME_INQUIRE_GENDER_MALE</option>
+                <option value="0">COM_DROPFILES_THEME_INQUIRE_GENDER_FEMALE</option>
+            </field>
+
+            <field  name="inquire_author3"
+                    type="text"
+                    stype="author3"
+                    default=""
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_3"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_3_DESC"
+                    message="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_3_MSG"
+            />
+
+            <field  name="inquire_author3_company"
+                    type="text"
+                    stype="author3_company"
+                    default=""
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_3_COMPANY"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_3_COMPANY_DESC"
+                    message="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_3_COMPANY_MSG"
+            />
+
+            <field  name="inquire_author3_primary"
+                    type="list"
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_3_PRIMARY"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_3_PRIMARY_DESC"
+                    default="0"
+                    class="inline">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field  name="inquire_author3_gender"
+                    type="list"
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_3_GENDER"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_3_GENDER_DESC"
+                    default="1"
+                    class="inline">
+                <option value="1">COM_DROPFILES_THEME_INQUIRE_GENDER_MALE</option>
+                <option value="0">COM_DROPFILES_THEME_INQUIRE_GENDER_FEMALE</option>
+            </field>
+
+            <field  name="inquire_author4"
+                    type="text"
+                    stype="author4"
+                    default=""
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_4"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_4_DESC"
+                    message="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_4_MSG"
+            />
+
+            <field  name="inquire_author4_company"
+                    type="text"
+                    stype="author4_company"
+                    default=""
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_4_COMPANY"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_4_COMPANY_DESC"
+                    message="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_4_COMPANY_MSG"
+            />
+
+            <field  name="inquire_author4_primary"
+                    type="list"
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_4_PRIMARY"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_4_PRIMARY_DESC"
+                    default="0"
+                    class="inline">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field  name="inquire_author4_gender"
+                    type="list"
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_4_GENDER"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_4_GENDER_DESC"
+                    default="1"
+                    class="inline">
+                <option value="1">COM_DROPFILES_THEME_INQUIRE_GENDER_MALE</option>
+                <option value="0">COM_DROPFILES_THEME_INQUIRE_GENDER_FEMALE</option>
+            </field>
+
+            <field  name="inquire_author5"
+                    type="text"
+                    stype="author5"
+                    default=""
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_5"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_5_DESC"
+                    message="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_5_MSG"
+            />
+
+            <field  name="inquire_author5_company"
+                    type="text"
+                    stype="author5_company"
+                    default=""
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_5_COMPANY"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_5_COMPANY_DESC"
+                    message="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_5_COMPANY_MSG"
+            />
+
+            <field  name="inquire_author5_primary"
+                    type="list"
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_5_PRIMARY"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_5_PRIMARY_DESC"
+                    default="0"
+                    class="inline">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field  name="inquire_author5_gender"
+                    type="list"
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_5_GENDER"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_5_GENDER_DESC"
+                    default="1"
+                    class="inline">
+                <option value="1">COM_DROPFILES_THEME_INQUIRE_GENDER_MALE</option>
+                <option value="0">COM_DROPFILES_THEME_INQUIRE_GENDER_FEMALE</option>
+            </field>
+
+            <field  name="inquire_author6"
+                    type="text"
+                    stype="author6"
+                    default=""
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_6"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_6_DESC"
+                    message="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_6_MSG"
+            />
+
+            <field  name="inquire_author6_company"
+                    type="text"
+                    stype="author6_company"
+                    default=""
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_6_COMPANY"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_6_COMPANY_DESC"
+                    message="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_6_COMPANY_MSG"
+            />
+
+            <field  name="inquire_author6_primary"
+                    type="list"
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_6_PRIMARY"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_6_PRIMARY_DESC"
+                    default="0"
+                    class="inline">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field  name="inquire_author6_gender"
+                    type="list"
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_6_GENDER"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_AUTHOR_6_GENDER_DESC"
+                    default="1"
+                    class="inline">
+                <option value="1">COM_DROPFILES_THEME_INQUIRE_GENDER_MALE</option>
+                <option value="0">COM_DROPFILES_THEME_INQUIRE_GENDER_FEMALE</option>
+            </field>
+
+
+			<field
+                            name="inquire_showborder"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_BORDER_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_BORDER_DESC"
+                            default="1"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+            <field name="inquire_marginleft"
+                            type="margin"
+                            stype="marginleft"
+                            default="0"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_LEFT_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_LEFT_DESC"
+                            message="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_LEFT_MSG"
+                            validate="integer"
+                            />
+
+			<field name="inquire_margintop"
+                            type="margin"
+                            stype="margintop"
+                            default="0"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_TOP_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_TOP_DESC"
+                            message="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_TOP_MSG"
+                            validate="integer"
+                            />
+			<field name="inquire_marginright"
+                            type="margin"
+                            stype="marginright"
+                            default="0"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_RIGHT_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_RIGHT_DESC"
+                            message="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_RIGHT_MSG"
+                            validate="integer"
+                            />
+
+			<field name="inquire_marginbottom"
+                            type="margin"
+                            stype="marginbottom"
+                            default="0"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_BOTTOM_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_BOTTOM_DESC"
+                            message="COM_DROPFILES_THEME_DEFAULT_PARAM_MARGIN_BOTTOM_MSG"
+                            validate="integer"
+                            />
+			<field
+                            name="inquire_showsize"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_SIZE_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_SIZE_DESC"
+                            default="1"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+			<field
+                            name="inquire_showtitle"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_TITLE_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_TITLE_DESC"
+                            default="1"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+			<field
+                            name="inquire_showversion"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_VERSION_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_VERSION_DESC"
+                            default="0"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+			<field
+                            name="inquire_showhits"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_HITS_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_HITS_DESC"
+                            default="0"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+			<field
+                            name="inquire_showdownload"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_DOWNLOAD_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_DOWNLOAD_DESC"
+                            default="1"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+			<field
+                            name="inquire_showdateadd"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_DATEADD_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_DATEADD_DESC"
+                            default="0"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+			<field
+                            name="inquire_showdatemodified"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_DATEMODIFIED_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_DATEMODIFIED_DESC"
+                            default="0"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+                        <field
+                            name="inquire_showsubcategories"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_SUBCATEGORIES_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_SUBCATEGORIES_DESC"
+                            default="0"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+                        <field
+                            name="inquire_showcategorytitle"
+                            type="list"
+                            label="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_CATEGORYTITLE_LABEL"
+                            description="COM_DROPFILES_THEME_DEFAULT_PARAM_SHOW_CATEGORYTITLE_DESC"
+                            default="0"
+                            class="inline">
+                                <option value="1">JYES</option>
+                                <option value="0">JNO</option>
+                        </field>
+		</fieldset>
+	</fields>
+
+</form>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<extension type="plugin" version="2.5" group="dropfilesthemes" method="upgrade">
+  <name>Dropfiles themes - inquire</name>
+  <creationDate>16-May-2015</creationDate>
+  <author>Matt Weaver</author>
+  <authorEmail>matthew@weavermj.co.uk</authorEmail>
+  <authorUrl>http://www.weavermj.co.uk</authorUrl>
+  <copyright />
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>1.0.0</version>
+  <description>Inquire theme for Dropfiles</description>
+  <files>
+    <filename plugin="inquire">inquire.php</filename>
+    <filename>style.css</filename>
+    <filename>form.xml</filename>
+    <filename>tpl.php</filename>
+    <filename>tplsingle.php</filename>
+    <folder>js</folder>
+    <folder>images</folder>
+  </files>
+</extension>
