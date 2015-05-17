@@ -158,6 +158,19 @@ div.icons {
 .icons span.text {
     position: absolute;
     bottom: 15px;
+    left: 40px;
+}
+
+.icons span.text.withCompany {
+    position: absolute;
+    bottom: 24px;
+}
+
+.icons span.company {
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 8px;
+    left: 40px;
 }
 
 .icons i.author {
