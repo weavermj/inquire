@@ -85,7 +85,7 @@ DropfilesFilesHelper::includeJSHelper();
 {{/if}}
 </script>
 
-<?php if(!empty($this->files) || !empty($this->categories)):
+<?php #if(!empty($this->files) || !empty($this->categories)):
     $panelClass = "noPanel";
     if(dropfilesBase::loadValue($this->params,'inquire_showborder',1)==1):
         $panelClass = "panel";
@@ -172,4 +172,4 @@ DropfilesFilesHelper::includeJSHelper();
     <?php endif; ?>
 
 </div>
-<?php endif; ?>
+<?php #endif; ?>

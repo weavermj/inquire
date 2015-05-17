@@ -47,7 +47,7 @@ class plgDropfilesthemesInquire extends dropfilesPluginBase
         $doc->addStyleSheet(JURI::base('true').'/plugins/dropfilesthemes/inquire/style.css');
 
         $content = '';
-        if(!empty($this->options['files']) || dropfilesBase::loadValue($this->params,'inquire_showsubcategories',1)==1){
+        #if(!empty($this->options['files']) || dropfilesBase::loadValue($this->params,'inquire_showsubcategories',1)==1){
             $this->files = $this->options['files'];
             $this->category = $this->options['category'];
             $this->categories = $this->options['categories'];
@@ -60,7 +60,7 @@ class plgDropfilesthemesInquire extends dropfilesPluginBase
             require dirname(__FILE__).DIRECTORY_SEPARATOR.'tpl.php';
             $content = ob_get_contents();
             ob_end_clean();
-        }
+        #}
         return $content;
     }
 
