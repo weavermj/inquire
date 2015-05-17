@@ -87,6 +87,10 @@ fieldset {
     margin-bottom: 30px;
 }
 
+.noPanel {
+    margin-bottom: 16px;
+}
+
 .active_menu {
     border-bottom: 4px solid #d61f26;
 }
