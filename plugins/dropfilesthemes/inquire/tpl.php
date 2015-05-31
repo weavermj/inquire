@@ -124,6 +124,16 @@ DropfilesFilesHelper::includeJSHelper();
     }
     ?>
 
+    <?php if(count($this->files)): ?>
+        <?php $filesClass = 'has-files'; ?>
+    <?php endif; ?>
+
+    <?php if(dropfilesBase::loadValue($this->params,'inquire_notes',"") != ""): ?>
+        <div class="inquire-notes <?php echo $filesClass; ?>">
+            <?php echo dropfilesBase::loadValue($this->params,'inquire_notes',""); ?>
+        </div>
+    <?php endif; ?>
+
     <?php if(count($this->categories) && dropfilesBase::loadValue($this->params,'inquire_showsubcategories',1)==1): ?>
         <?php foreach ($this->categories as $category): ?>
             <a class="dropfilescategory catlink" href="#" data-idcat="<?php echo $category->id; ?>"><?php echo $category->title; ?></a>

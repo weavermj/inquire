@@ -240,6 +240,14 @@
                 <option value="0">COM_DROPFILES_THEME_INQUIRE_GENDER_FEMALE</option>
             </field>
 
+            <field  name="inquire_notes"
+                    type="textarea"
+                    label="COM_DROPFILES_THEME_INQUIRE_PARAM_NOTES"
+                    description="COM_DROPFILES_THEME_INQUIRE_PARAM_NOTES_DESC"
+                    default=""
+                    rows="6"
+                    class="inline"
+                    filter="raw" />
 
 			<field
                             name="inquire_showborder"
