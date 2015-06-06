@@ -65,6 +65,26 @@ h3 {
         margin-left: 16px;
     }
 
+    ul.indent {
+        margin-left: 32px;
+    }
+
+    ul.space li ul {
+        margin-left: 2rem;
+    }
+
+}
+
+ul.space li {
+    margin-bottom: 12px;
+}
+
+ul.space li ul {
+    margin-top: 8px;
+}
+
+ul.space li ul li {
+    margin-bottom: auto;
 }
 
 .top-bar a:hover,
