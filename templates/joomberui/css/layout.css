@@ -55,6 +55,16 @@ h2 {
 
 h3 {
     font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+@media only screen and (min-width: 40.063em) {
+
+    .indent {
+        margin-left: 16px;
+    }
+
 }
 
 .top-bar a:hover,
