@@ -257,6 +257,10 @@ div.icons {
     font-size: 0.8em;
 }
 
+.person li.role {
+    font-size: 0.8em;
+    font-style: italic;
+}
 /* ****************** */
 
 /* Video */
