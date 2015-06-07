@@ -61,10 +61,11 @@ class UuControllerUser extends UuController
 		// Perform the log in.
 		if (true === $app->login($credentials, $options)) {
 			// Success
-            $url = UuSiteHelper::getRedirectUrl($conf->get('red_login_success'),$conf->get('red_login_success_custom'));
+            // $url = UuSiteHelper::getRedirectUrl($conf->get('red_login_success'),$conf->get('red_login_success_custom'));
 			//$app->setUserState('uu.login.form.data', array());
 			//$app->redirect(JRoute::_($app->getUserState('uu.login.form.return'), false));
-            $app->redirect(JRoute::_($url, false));
+			$app->redirect(JRoute::_($options['return'], false));
+			// $app->redirect(JRoute::_($url, false));
 		} else {
 			// Login failed !
 			$data['remember'] = (int)$options['remember'];
@@ -85,6 +86,8 @@ class UuControllerUser extends UuController
 		$app = JFactory::getApplication();
         $conf = new UuConfig();
 
+		$logout_redir = base64_decode(JRequest::getVar('return', '', 'POST', 'BASE64'));
+
 		// Perform the log in.
 		$error = $app->logout();
 
@@ -97,7 +100,7 @@ class UuControllerUser extends UuController
 			}
 
 			// Redirect the user.
-			$app->redirect(JRoute::_($return, false));
+			$app->redirect(JRoute::_($logout_redir, false));
 		} else {
 			$app->redirect(JRoute::_('index.php?option=com_uu&view=login', false));
 		}
