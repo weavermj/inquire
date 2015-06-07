@@ -65,7 +65,8 @@ h3 {
         margin-left: 16px;
     }
 
-    ul.indent {
+    ul.indent,
+    ol.indent {
         margin-left: 32px;
     }
 
@@ -75,7 +76,8 @@ h3 {
 
 }
 
-ul.space li {
+ul.space li,
+ol.space li {
     margin-bottom: 12px;
 }
 
