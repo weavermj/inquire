@@ -220,7 +220,11 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 	<?php //Optional link to let them register to see the whole article. ?>
 	<?php if ($params->get('show_readmore') && $this->item->fulltext != null) :
 		$link1 = JRoute::_('index.php?option=com_users&view=login');
-		$link = new JURI($link1);?>
+		$link = new JURI($link1);
+		$uri = & JFactory::getURI();
+		$redir_url = base64_encode($uri->toString());
+		$link = $link . "&inq_return=" . $redir_url;
+	?>
 		<div class="panel">
 			<div class="row">
 				<div class="small-12 medium-8 large-5 columns">

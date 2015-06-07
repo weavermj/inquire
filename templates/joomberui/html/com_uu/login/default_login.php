@@ -17,6 +17,14 @@ JHtml::_('behavior.noframes');
 	</h1>
 	<?php endif; ?>
 
+	<?php
+	$return_url = base64_encode($this->login_redirect_url);
+	$inq_redir = JRequest::getVar('inq_return', '', 'GET', 'BASE64');
+	if (strlen($inq_redir) > 0) {
+		$return_url = $inq_redir;
+	}
+	?>
+
 	<form action="<?php echo JRoute::_('index.php?option=com_uu&task=user.login'); ?>" method="post">
 
 		<fieldset>
@@ -33,7 +41,7 @@ JHtml::_('behavior.noframes');
 			</div>
 			<?php endif; ?>
 			<button type="submit" class="btn btn-primary button radius"><?php echo JText::_('JLOGIN'); ?></button>
-			<input type="hidden" name="return" value="<?php echo base64_encode($this->login_redirect_url); ?>" />
+			<input type="hidden" name="return" value="<?php echo $return_url ?>" />
 			<?php echo JHtml::_('form.token'); ?>
 		</fieldset>
 	</form>
