@@ -525,6 +525,7 @@ div.cat-children h3,
     vertical-align: top;
     text-align: left;
     font-weight: bold;
+    min-width: 250px;
 }
 
 .inq-footer ul.nav.menu li.alias-parent-active > a {

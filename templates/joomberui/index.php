@@ -180,7 +180,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
 			<hr class="inq-divide">
 			<div class="inq-copyright">
 				<div class="row">
-					&copy; <?php echo date("Y"); ?> Inquire UK | <a href="mailto:admin@inquire.org.uk">admin@inquire.org.uk</a>
+					&copy; <?php echo date("Y"); ?> INQUIRE | <a href="mailto:admin@inquire.org.uk">admin@inquire.org.uk</a>
 				</div>
 				<div class="row ">
 					<a href="/22-website-terms-and-conditions">Website Terms and Conditions</a>
