@@ -229,7 +229,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
   	</script>
 
 
-    <!-- Load respond.js for shit browsers -->
+    <!-- Load respond.js for older browsers -->
 
   <!--[if lte IE 8]>  <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/respond.js"></script> <![endif]-->
 
