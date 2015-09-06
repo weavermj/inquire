@@ -108,7 +108,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
   <div class="row">
   	<!--mainrow-->
     <?php if ($this->countModules( 'left' )) : ?>
-      <section class="<?php echo $leftWidth ?> columns sidebar">
+      <section class="<?php echo $leftWidth ?> columns sidebar left">
         <!--left-row-->
         <jdoc:include type="modules" name="left" style="joomberui" />
       </section>
@@ -142,7 +142,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
     <?php endif; ?>
    		</div>
 		<?php if ($this->countModules( 'right' )) : ?>
-      <section class="<?php echo $rightWidth ?> columns sidebar">
+      <section class="<?php echo $rightWidth ?> columns sidebar right">
         <!--right-row-->
           <jdoc:include type="modules" name="right" style="joomberui" />
       </section>

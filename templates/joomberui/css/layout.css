@@ -143,6 +143,20 @@ fieldset {
     margin: 8px 0 8px 8px;
 }
 
+/* Positions */
+
+section.right,
+.login-area {
+    background: #e9e9e9;
+}
+
+.moduletable.gap {
+    background: #ffffff;
+    margin-left: -0.9375rem;
+    margin-right: -0.9375rem;
+    height: 0.9357rem;
+}
+
 /* Forms */
 
 legend {
@@ -346,6 +360,14 @@ div.cat-children h3,
 .article img {
     border-radius: 10px;
 }
+
+/* Newsflash */
+
+.newsflash p {
+    font-size: 90%;
+}
+
+/* End newsflash*/
 
 /* ***************** */
 
