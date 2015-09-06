@@ -231,6 +231,15 @@ div.icons {
     color: #303030;
 }
 
+/* Login Form Top Bar */
+
+@media only screen and (max-width: 64.063em) {
+    #form-login-submit button,
+    #form-login-submit a {
+        width: 100%;
+    }
+}
+
 /* Category lists */
 
 .image-wrapper {
