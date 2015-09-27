@@ -1,7 +1,7 @@
 <?php
-/** 
+/**
  * Dropfiles
- * 
+ *
  * We developed this code with our hearts and passion.
  * We hope you found it useful, easy to understand and to customize.
  * Otherwise, please feel free to contact us at contact@joomunited.com *
@@ -27,7 +27,7 @@ jimport( 'joomla.application.categories' );
  */
 class plgContentdropfiles extends JPlugin
 {
-  
+
     /**
      * Example before display content method
      *
@@ -48,12 +48,14 @@ class plgContentdropfiles extends JPlugin
         $this->context = $context;
             //Replace category
             $article->text = preg_replace_callback('@<img.*?data\-dropfilescategory="([0-9]+)".*?>@', array($this,'replace'),$article->text);
+            $article->introtext = preg_replace_callback('@<img.*?data\-dropfilescategory="([0-9]+)".*?>@', array($this,'replace'),$article->text);
             //Replace single file
             $article->text = preg_replace_callback('@<img.*?data\-dropfilesfile="([[:alnum:]_]+)".*?>@', array($this,'replaceSingle'),$article->text);
+            $article->introtext = preg_replace_callback('@<img.*?data\-dropfilesfile="([[:alnum:]_]+)".*?>@', array($this,'replaceSingle'),$article->text);
 //        }
         return true;
     }
-    
+
     public function onDropfilesContentPrepare($context, &$article){
         $foo = null;
         $this->onContentPrepare($context, $article,$foo,$foo);
@@ -68,14 +70,14 @@ class plgContentdropfiles extends JPlugin
         JModelLegacy::addIncludePath(JPATH_ROOT.'/components/com_dropfiles/models/','DropfilesModelFrontconfig');
         JModelLegacy::addIncludePath(JPATH_ROOT.'/components/com_dropfiles/models/','DropfilesModelCategories');
 	dropfilesBase::loadLanguage();
-        
+
         $modelFiles = JModelLegacy::getInstance('Frontfiles','dropfilesModel');
         $modelConfig = JModelLegacy::getInstance('Frontconfig','dropfilesModel');
         $modelCategories = JModelLegacy::getInstance('Frontcategories','dropfilesModel');
         $modelCategory = JModelLegacy::getInstance('Frontcategory','dropfilesModel');
-        
+
         $modelFiles->getState('onsenfout'); //To autopopulate state
-        $modelFiles->setState('filter.category_id', (int)$match[1]); 
+        $modelFiles->setState('filter.category_id', (int)$match[1]);
         $modelCategories->getState('onsenfout'); //To autopopulate state
         $modelCategories->setState('category.id', (int)$match[1]);
 
@@ -84,10 +86,10 @@ class plgContentdropfiles extends JPlugin
         if(!$category){
             return '';
         }
-        
+
         $categories = $modelCategories->getItems();
         $params = $modelConfig->getParams($category->id);
-        
+
         if($category->type=='googledrive'){
             $google = new dropfilesGoogle();
             if(isset($params->params->ordering)){
@@ -115,7 +117,7 @@ class plgContentdropfiles extends JPlugin
             $files = $modelFiles->getItems();
         }
         $files = DropfilesFilesHelper::addInfosToFile($files,$category);
-        
+
         if($this->context === 'com_finder.indexer'){
             $theme = 'indexer';
         }else{
@@ -152,11 +154,11 @@ class plgContentdropfiles extends JPlugin
         }
         return '';
     }
-    
+
     /**
      * Replace a single image
      * @param type $match
-     * @return string 
+     * @return string
      */
     private function replaceSingle($match){
         jimport('joomla.application.component.model');
@@ -165,13 +167,13 @@ class plgContentdropfiles extends JPlugin
         JModelLegacy::addIncludePath(JPATH_ROOT.'/components/com_dropfiles/models/','DropfilesModelFrontfile');
         JModelLegacy::addIncludePath(JPATH_ROOT.'/components/com_dropfiles/models/','DropfilesModelFrontconfig');
 	dropfilesBase::loadLanguage();
-        
+
         $modelFile = JModelLegacy::getInstance('Frontfile','dropfilesModel');
         $modelConfig = JModelLegacy::getInstance('Frontconfig','dropfilesModel');
-        $modelCategory = JModelLegacy::getInstance('Frontcategory','dropfilesModel');	
+        $modelCategory = JModelLegacy::getInstance('Frontcategory','dropfilesModel');
 
         preg_match('@.*data\-dropfilesfilecategory="([0-9]+)".*@', $match[0],$matchCat);
-        
+
         if(!empty($matchCat)){
             $category = $modelCategory->getCategory((int)$matchCat[1]);
             if(!$category){
@@ -187,7 +189,7 @@ class plgContentdropfiles extends JPlugin
                 return '';
             }
         }
-        
+
         if($category->type=='googledrive'){
             $google = new dropfilesGoogle();
             $file = $google->getFileInfos($match[1],$category->cloud_id);
@@ -195,16 +197,16 @@ class plgContentdropfiles extends JPlugin
             $file = $modelFile->getFile((int)$match[1]);
         }
         $file = DropfilesFilesHelper::addInfosToFile(json_decode(json_encode($file), false),$category);
-        
+
         //Access check already done in category model
         $catmod = JCategories::getInstance('Dropfiles');
         $jcategory = $catmod->get($category->id);
         if (!$jcategory) {
                 return '';
         }
-        
+
         $params = $modelConfig->getParams($jcategory->id);
-        
+
         if($this->context === 'com_finder.indexer'){
             $theme = 'indexer';
         }else{
@@ -214,11 +216,11 @@ class plgContentdropfiles extends JPlugin
                 $theme = 'default';
             }
         }
-        
+
         JPluginHelper::importPlugin('dropfilesthemes');
         $dispatcher = JDispatcher::getInstance();
         $result = $dispatcher->trigger('onShowFrontFile', array(array('file' => $file,'category'=>$category,'params'=>$params->params,'theme'=>$theme)));
-        
+
         if(!empty($result[0])){
             $componentParams = JComponentHelper::getParams('com_dropfiles');
             if($componentParams->get('usegoogleviewer',1)==1){
