@@ -56,9 +56,6 @@ DropfilesFilesHelper::includeJSHelper();
                         <?php if(dropfilesBase::loadValue($this->params,'inquire_showtitle',1)==1): ?>
                         <h3><a href='{{link}}'>{{title}}</a></h3>
                         <?php endif; ?>
-                        {{#if description}}
-                        <div>{{description}}</div>
-                        {{/if}}
                         <?php if(dropfilesBase::loadValue($this->params,'inquire_showversion',1)==1): ?>
                         {{#if version}}
                         <div><span><?php echo JText::_('COM_DROPFILES_DEFAULT_FRONT_VERSION'); ?> : </span> {{version}}&nbsp;</div>
@@ -155,13 +152,12 @@ DropfilesFilesHelper::includeJSHelper();
                     <?php if(dropfilesBase::loadValue($this->params,'inquire_showtitle',1)==1): ?>
                     <h3><a href="<?php echo $file->link ; ?>"><?php echo $file->title; ?></a></h3>
                     <?php endif; ?>
-                    <div><?php echo $file->description; ?></div>
-                        <?php if(dropfilesBase::loadValue($this->params,'inquire_showversion',1)==1 && trim($file->version)): ?>
+                    <?php if(dropfilesBase::loadValue($this->params,'inquire_showversion',1)==1 && trim($file->version)): ?>
                         <div><span><?php echo JText::_('COM_DROPFILES_DEFAULT_FRONT_VERSION'); ?> : </span> <?php echo $file->version; ?>&nbsp;</div>
-                        <?php endif; ?>
-                        <?php if(dropfilesBase::loadValue($this->params,'inquire_showsize',1)==1): ?>
+                    <?php endif; ?>
+                    <?php if(dropfilesBase::loadValue($this->params,'inquire_showsize',1)==1): ?>
                         <div><span><?php echo JText::_('COM_DROPFILES_DEFAULT_FRONT_SIZE'); ?> : </span> <?php echo DropfilesFilesHelper::bytesToSize($file->size); ?></div>
-                        <?php endif; ?>
+                    <?php endif; ?>
                     <?php if(dropfilesBase::loadValue($this->params,'inquire_showhits',1)==1): ?>
                         <div><span><?php echo JText::_('COM_DROPFILES_DEFAULT_FRONT_HITS'); ?> : </span> <?php echo $file->hits; ?></div>
                     <?php endif; ?>
@@ -183,3 +179,4 @@ DropfilesFilesHelper::includeJSHelper();
 
 </div>
 <?php #endif; ?>
+                                                                                                   

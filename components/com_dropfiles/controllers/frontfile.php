@@ -1,7 +1,7 @@
 <?php
-/** 
+/**
  * Dropfiles
- * 
+ *
  * We developed this code with our hearts and passion.
  * We hope you found it useful, easy to understand and to customize.
  * Otherwise, please feel free to contact us at contact@joomunited.com *
@@ -30,16 +30,16 @@ class dropfilesControllerFrontfile extends JControllerLegacy
 
     public function download(){
         $model = $this->getModel('frontfile');
-        
+
         $id = JFactory::getApplication()->input->getString('id', 0);
         $catid = JFactory::getApplication()->input->getInt('catid', 0);
-        
+
         $catmod = $this->getModel('frontcategory');
-        
+
         $category = $catmod->getCategory($catid);
         $user	= JFactory::getUser();
         $groups	= $user->getAuthorisedViewLevels();
-        
+
         if (!in_array($category->access, $groups)) {
             $token = JRequest::getString('token');
             $modelTokens =  $this->getModel('tokens');
@@ -52,7 +52,7 @@ class dropfilesControllerFrontfile extends JControllerLegacy
                 $this->redirect();
             }
         }
-        
+
         switch ($category->type) {
             case 'googledrive':
                 JLoader::register('DropfilesGoogle', JPATH_ADMINISTRATOR.'/components/com_dropfiles/classes/dropfilesGoogle.php');
@@ -63,9 +63,9 @@ class dropfilesControllerFrontfile extends JControllerLegacy
                     $this->setRedirect('index.php');
                     $this->redirect();
                 }
-                
+
                 $google->incrHits($id);
-                
+
                 header('Content-Disposition: attachment; filename="'.htmlspecialchars($file->title.'.'.$file->ext).'"');
                 header('Content-Description: File Transfer');
                 header('Content-Type: application/octet-stream');
@@ -81,6 +81,14 @@ class dropfilesControllerFrontfile extends JControllerLegacy
                 break;
             default:
                 $file = $model->getFile($id);
+                /* -------- */
+                // MW Added 27-09-2015 for Inquire
+                if (!empty($file->description)) {
+                    $custom_filename = htmlspecialchars($file->description);
+                } else {
+                    $custom_filename = htmlspecialchars($file->title.'.'.$file->ext);
+                }
+                /* -------- */
                 if(!$file){
                     $this->setRedirect('index.php');
                     $this->redirect();
@@ -90,7 +98,7 @@ class dropfilesControllerFrontfile extends JControllerLegacy
                     JLoader::register('DropfilesBase', JPATH_ADMINISTRATOR.'/components/com_dropfiles/classes/dropfilesBase.php');
                     $sysfile = dropfilesBase::getFilesPath($file->catid).'/'.$file->file;
                     if(file_exists($sysfile)) {
-                        header('Content-Disposition: attachment; filename="'.htmlspecialchars($file->title.'.'.$file->ext).'"');
+                        header('Content-Disposition: attachment; filename="'.$custom_filename.'"');
                         header('Content-Description: File Transfer');
                         header('Content-Type: application/octet-stream');
                         header('Content-Transfer-Encoding: binary');
@@ -99,7 +107,7 @@ class dropfilesControllerFrontfile extends JControllerLegacy
                         header('Pragma: public');
                         header('Content-Length: ' . filesize($sysfile));
                         ob_clean();
-                        
+
                         $params = JComponentHelper::getParams('com_dropfiles');
                         if($params->get('readfiletype',0)==0){
                             flush();
@@ -116,6 +124,6 @@ class dropfilesControllerFrontfile extends JControllerLegacy
                 }
                 break;
         }
-        
+
     }
 }
