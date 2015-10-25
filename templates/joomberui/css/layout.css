@@ -502,8 +502,13 @@ div.cat-children h3,
         margin-left: 0;
     }
 
-    .dropfiles-content .openlink {
+    .dropfiles-content .downloadblock {
         display: none;
+    }
+
+    .dropfiles-content .file,
+    .dropfiles-content.dropfiles-content-default .file {
+        min-height: 0;
     }
 
 }
