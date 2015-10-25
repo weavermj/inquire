@@ -219,7 +219,7 @@ div.icons {
 .icons span.company {
     font-size: 0.8rem;
     position: absolute;
-    bottom: 8px;
+    top: 28px;
     left: 40px;
 }
 
