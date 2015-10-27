@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 
 if (($this->error->getCode()) == '404') {
-	header('Location: /index.php?option=com_content&view=article&id=59');
+	header('Location: /index.php?option=com_content&view=article&id=131');
 	exit;
 }
 
