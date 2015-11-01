@@ -484,6 +484,11 @@ div.cat-children h3,
     background: #ab191e;
 }
 
+.dropfiles-content .openlink {
+    display: none;
+}
+
+
 .inquire-notes {
     font-style: italic;
 }
