@@ -48,7 +48,7 @@ defined('_JEXEC') or die;
                  <?php
 			$usersConfig = JComponentHelper::getParams('com_users');
 			if ($usersConfig->get('allowUserRegistration')) : ?>
-                    <a href="#" data-dropdown="drop" class="radius button dropdown" style="float:right;">Problems?</a><br>
+                    <a href="#" data-dropdown="drop" class="radius button dropdown" style="float:right;">Help</a><br>
 
         <ul id="drop" data-dropdown-content class="f-dropdown">
 			<li><a href="<?php echo JRoute::_('index.php?option=com_users&view=registration'); ?>">
