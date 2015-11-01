@@ -318,7 +318,8 @@ class UuModelRegistration extends JModelForm {
 
         // Store the joomla user data.
         if (!$user->save()) {
-            $this->setError(JText::sprintf('COM_UU_REGISTRATION_SAVE_FAILED', $user->getError()));
+ 	    # MW removed 1st Nov 2015 - shows up extra error on the Account Registration screen
+            #$this->setError(JText::sprintf('COM_UU_REGISTRATION_SAVE_FAILED', $user->getError()));
             return false;
         }
 
