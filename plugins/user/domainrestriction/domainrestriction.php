@@ -110,13 +110,16 @@ class plgUserDomainRestriction extends JPlugin {
             $config = JFactory::getConfig();
             $sender = array(
                 'webmaster@inquire.org.uk',
-                'Inquire Website'
+                'INQUIRE Website'
             );
 
             $mailer->setSender($sender);
 
-            $recipient = 'weavermjw@googlemail.com';
-            $mailer->addRecipient($recipient);
+	    $recipients = explode(";",$emailRecipient);
+            
+	    for($i = 0; $i < sizeof($recipients); $i++) {
+	        $mailer->addRecipient($recipients[$i]);
+	    }
 
             $body  = "A new user tried to register at www.inquire.org.uk, but their email address did not match the current whitelist.\n\n";
             $body .= "The user's details were as follows:\n\n";
@@ -128,7 +131,7 @@ class plgUserDomainRestriction extends JPlugin {
             $body .= "Date: " . $user['registerDate'] . "\n\n";
             $body .= "Please consider this user's request to join the website.";
 
-            $mailer->setSubject('Inquire Membership - User not on whitelist');
+            $mailer->setSubject('INQUIRE Website - User not on whitelist');
             $mailer->setBody($body);
             $send = $mailer->Send();
         }
