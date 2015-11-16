@@ -17,11 +17,14 @@ $msgList = $displayData['msgList'];
 		<div id="system-message">
 			<?php foreach ($msgList as $type => $msgs) : ?>
 				<div class="alert alert-<?php echo $type; ?>">
+					<?php // This requires JS so we should add it trough JS. Progressive enhancement and stuff. ?>
+					<a class="close" data-dismiss="alert">×</a>
+
 					<?php if (!empty($msgs)) : ?>
-						<h2 class="alert-heading"><?php echo JText::_($type); ?></h2>
+						<h4 class="alert-heading"><?php echo JText::_($type); ?></h4>
 						<div>
 							<?php foreach ($msgs as $msg) : ?>
-								<p><?php echo $msg; ?></p>
+								<p class="alert-message"><?php echo $msg; ?></p>
 							<?php endforeach; ?>
 						</div>
 					<?php endif; ?>
