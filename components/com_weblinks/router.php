@@ -3,7 +3,7 @@
  * @package     Joomla.Site
  * @subpackage  com_weblinks
  *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,9 +12,7 @@ defined('_JEXEC') or die;
 /**
  * Routing class from com_weblinks
  *
- * @package     Joomla.Site
- * @subpackage  com_weblinks
- * @since       3.3
+ * @since  3.3
  */
 class WeblinksRouter extends JComponentRouterBase
 {
@@ -236,7 +234,7 @@ class WeblinksRouter extends JComponentRouterBase
 						->select($db->quoteName('id'))
 						->from('#__weblinks')
 						->where($db->quoteName('catid') . ' = ' . (int) $vars['catid'])
-						->where($db->quoteName('alias') . ' = ' . $db->quote($db->quote(str_replace(':', '-', $segment))));
+						->where($db->quoteName('alias') . ' = ' . $db->quote(str_replace(':', '-', $segment)));
 					$db->setQuery($query);
 					$id = $db->loadResult();
 				}
