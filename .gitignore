@@ -5,3 +5,5 @@
 /media/com_dropfiles
 /administrator/components/com_akeeba/backup/
 /administrator/components/com_akeeba/engine/serverkey.php
+.idea
+_log
