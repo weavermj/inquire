@@ -123,7 +123,7 @@ var JFormValidator = function() {
  	 	 		label = jQuery(invalid[i]).data("label");
  	 			if (label) {
  	 	 			error.error.push(message + label.text().replace("*", ""));
-                		}
+				}
  	 	 	}
  	 	 	Joomla.renderMessages(error);
  	 	}

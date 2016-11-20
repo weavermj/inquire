@@ -151,16 +151,25 @@ Joomla.editors.instances = Joomla.editors.instances || {};
 		Joomla.removeMessages();
 
 		var messageContainer = document.getElementById( 'system-message-container' ),
-			type, typeMessages, messagesBox, title, titleWrapper, i, messageWrapper;
+			type, typeMessages, messagesBox, title, titleWrapper, i, messageWrapper, heading;
+
+		function toTitleCase(str) {
+			return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+		}
 
 		for ( type in messages ) {
 			if ( !messages.hasOwnProperty( type ) ) { continue; }
 			// Array of messages of this type
 			typeMessages = messages[ type ];
 
+			heading = document.createElement('h4');
+			heading.className = 'alert-heading';
+			heading.innerHTML = toTitleCase(type);
+
 			// Create the alert box
 			messagesBox = document.createElement( 'div' );
 			messagesBox.className = 'alert alert-' + type;
+			messagesBox.appendChild(heading);
 
 			// Title
 			title = Joomla.JText._( type );
