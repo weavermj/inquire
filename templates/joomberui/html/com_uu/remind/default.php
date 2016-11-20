@@ -14,6 +14,9 @@ JHtml::_('behavior.tooltip');
 JHtml::_('behavior.formvalidation');
 ?>
 <div class="remind<?php echo $this->pageclass_sfx?>">
+	<h1>
+		Forgot your username?
+	</h1>
 	<?php if ($this->params->get('show_page_heading')) : ?>
 	<h1>
 		<?php echo $this->escape($this->params->get('page_heading')); ?>
