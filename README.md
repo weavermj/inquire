@@ -2,6 +2,17 @@
 
 This is the Joomla source for the Inquire UK website. 
 
+## Files to be wary of when upgrading
+
+ When upgrading Joomla, the following files will need to be checked to ensure that custom language overrides haven't been lost:
+ 
+ - administrator/language/en-GB/en-GB.ini
+ - language/en-GB/en-GB.com_content.ini
+ - language/en-GB/en-GB.com_users.ini
+ - language/en-GB/en-GB.ini
+ - layouts/joomla/system/message.php
+ - media/system/js/core-uncompressed.js
+
 ## Local development setup
  
  First, check out the source code from this respository into a local folder.
